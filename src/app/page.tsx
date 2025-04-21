@@ -10,6 +10,9 @@ import {
   LucideStar,
 } from "lucide-react";
 import { ReactNode, ButtonHTMLAttributes } from "react";
+import Footer from "./components/footer";
+import Pricing from "./components/pricing";
+import Navbar from "./components/navbar";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -79,7 +82,7 @@ function PricingCard({
   return (
     <div
       className={clsx(
-        "rounded-2xl p-6 shadow-md flex flex-col items-center text-center",
+        "contrainer rounded-2xl p-6 shadow-md flex flex-col items-center text-center",
         highlight ? "bg-blue-600 text-white" : "bg-white text-gray-900"
       )}
     >
@@ -110,6 +113,7 @@ function PricingCard({
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-4 md:p-8">
+      <Navbar></Navbar>
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
           TakeNote
@@ -299,9 +303,6 @@ export default function Home() {
           />
         </div>
       </section>
-      <footer className="text-center text-gray-500 mt-20 text-sm">
-        © 2025 TakeNote. Tất cả quyền được bảo lưu.
-      </footer>
     </div>
   );
 }
