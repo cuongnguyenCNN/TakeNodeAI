@@ -11,6 +11,8 @@ import {
   LucideStar,
 } from "lucide-react";
 import { ReactNode, ButtonHTMLAttributes } from "react";
+import { title } from "process";
+import { Princess_Sofia } from "next/font/google";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -62,6 +64,50 @@ function CustomCardContent({
   className = "",
 }: CustomCardContentProps) {
   return <div className={clsx("p-6", className)}>{children}</div>;
+}
+interface PricingCard {
+  title?: string;
+  price: string;
+  features: string[];
+  buttonText: string;
+  highlight: boolean;
+}
+function PricingCard({
+  title,
+  price,
+  features,
+  buttonText,
+  highlight,
+}: PricingCard) {
+  return (
+    <div
+      className={clsx(
+        "rounded-2xl p-6 shadow-md flex flex-col items-center text-center",
+        highlight ? "bg-blue-600 text-white" : "bg-white text-gray-900"
+      )}
+    >
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <div className="text-4xl font-extrabold mb-4">{price}</div>
+      <ul className="text-left mb-6 space-y-2">
+        {features.map((f, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <LucideStar className="w-4 h-4 text-yellow-400 mt-1" />
+            <span>{f}</span>
+          </li>
+        ))}
+      </ul>
+      <CustomButton
+        variant={highlight ? "outline" : "primary"}
+        className={
+          highlight
+            ? "text-white border-white hover:bg-white hover:text-blue-600"
+            : ""
+        }
+      >
+        {buttonText}
+      </CustomButton>
+    </div>
+  );
 }
 
 export default function Home() {
@@ -216,7 +262,46 @@ export default function Home() {
           Nâng cấp lên bản Pro
         </CustomButton>
       </section>
-
+      <section className="py-20 bg-white max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">💎 Gói dịch vụ</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <PricingCard
+            title="Miễn phí"
+            price="0₫"
+            features={[
+              "Trích xuất từ YouTube",
+              "Ghi chú từ PDF",
+              "Ghi âm & chuyển giọng nói",
+            ]}
+            buttonText="Dùng ngay"
+            highlight
+          />
+          <PricingCard
+            title="Pro"
+            price="99.000₫ / tháng"
+            features={[
+              "Mind Map",
+              "Lưu trữ đám mây",
+              "Ưu tiên hỗ trợ",
+              "Không giới hạn ghi chú",
+            ]}
+            buttonText="Nâng cấp Pro"
+            highlight
+          />
+          <PricingCard
+            title="Doanh nghiệp"
+            price="Liên hệ"
+            features={[
+              "Tùy chỉnh tính năng",
+              "Bảo mật nâng cao",
+              "Tích hợp API",
+              "Quản lý nhiều người dùng",
+            ]}
+            buttonText="Liên hệ ngay"
+            highlight
+          />
+        </div>
+      </section>
       <footer className="text-center text-gray-500 mt-20 text-sm">
         © 2025 TakeNote. Tất cả quyền được bảo lưu.
       </footer>
