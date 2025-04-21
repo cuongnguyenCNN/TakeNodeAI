@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import clsx from "clsx";
 import {
@@ -11,8 +10,6 @@ import {
   LucideStar,
 } from "lucide-react";
 import { ReactNode, ButtonHTMLAttributes } from "react";
-import { title } from "process";
-import { Princess_Sofia } from "next/font/google";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
