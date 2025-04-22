@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LanguageSelector from "../components/languageselector";
 
 function convertStyleStringToObject(styleString: string) {
@@ -22,7 +23,7 @@ export default async function SignIn() {
     <div className=" flex h-screen w-screen flex-col items-center justify-center">
       <div className="max-w-[1300px] w-full relative h-full flex flex-col items-center justify-center">
         <div className="absolute top-8 flex justify-between items-center w-full">
-          <a className="flex items-center  gap-2" href="/">
+          <Link className="flex items-center  gap-2" href="/">
             <img
               alt="logo"
               loading="lazy"
@@ -46,7 +47,7 @@ export default async function SignIn() {
               src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=96&amp;q=75"
               style={convertStyleStringToObject("color: transparent;")}
             />
-          </a>
+          </Link>
           <div>
             {/* <button
               type="button"
@@ -367,19 +368,19 @@ export default async function SignIn() {
           </div>
           <p className="px-8  text-center text-xs text-muted-foreground">
             By signing in, you agree to our
-            <a
+            <Link
               className="hover:text-blue-400 text-foreground mx-1"
               href="/term"
             >
               Term of Use
-            </a>
+            </Link>
             and
-            <a
+            <Link
               className="hover:text-blue-400 text-foreground mx-1"
               href="/privacy"
             >
               Privacy Policy
-            </a>
+            </Link>
           </p>
         </div>
       </div>
