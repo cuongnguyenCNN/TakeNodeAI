@@ -10,8 +10,6 @@ import {
   LucideStar,
 } from "lucide-react";
 import { ReactNode, ButtonHTMLAttributes } from "react";
-import Footer from "./components/footer";
-import Pricing from "./components/pricing";
 import Navbar from "./components/navbar";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
