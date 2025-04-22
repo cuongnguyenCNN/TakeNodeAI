@@ -267,7 +267,7 @@ export default function Home() {
           Nâng cấp lên bản Pro
         </CustomButton>
       </section>
-      {/* <section className="py-20 bg-white max-w-6xl mx-auto">
+      <section className="py-20 bg-white max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">💎 Gói dịch vụ</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <PricingCard
@@ -306,7 +306,7 @@ export default function Home() {
             highlight
           />
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

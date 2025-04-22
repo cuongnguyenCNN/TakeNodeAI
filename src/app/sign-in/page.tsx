@@ -24,7 +24,7 @@ export default async function SignIn() {
       <div className="max-w-[1300px] w-full relative h-full flex flex-col items-center justify-center">
         <div className="absolute top-8 flex justify-between items-center w-full">
           <Link className="flex items-center  gap-2" href="/">
-            <img
+            {/* <img
               alt="logo"
               loading="lazy"
               width="45"
@@ -46,7 +46,10 @@ export default async function SignIn() {
               srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=96&amp;q=75 2x"
               src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=96&amp;q=75"
               style={convertStyleStringToObject("color: transparent;")}
-            />
+            /> */}
+            <h4 className="scroll-m-20 tracking-tight text-2xl font-black">
+              Noteflow AI
+            </h4>
           </Link>
           <div>
             {/* <button

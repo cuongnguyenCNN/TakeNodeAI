@@ -92,6 +92,9 @@ function Navbar() {
                 </a>
               </li>
             </ul>
+            <button onClick={toggleMenu}>
+              <LucideX className="w-6 h-6 text-gray-600" />
+            </button>
           </div>
         </div>
       )}
