@@ -52,6 +52,19 @@ function Navbar() {
           <div className="bg-white w-3/4 p-6 absolute right-0 top-0 h-full">
             <ul className="space-y-4">
               <li>
+                <a href="/" className="block text-gray-800 hover:text-blue-600">
+                  Trang chủ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard"
+                  className="block text-gray-800 hover:text-blue-600"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li>
                 <a
                   href="#how-it-works"
                   className="block text-gray-800 hover:text-blue-600"
@@ -85,12 +98,13 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  href="#newsletter"
+                  href="sign-in"
                   className="block text-gray-800 hover:text-blue-600"
                 >
                   Đăng ký
                 </a>
               </li>
+              <li></li>
             </ul>
             <button onClick={toggleMenu}>
               <LucideX className="w-6 h-6 text-gray-600" />
