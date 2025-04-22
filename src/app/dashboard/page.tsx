@@ -24,8 +24,8 @@ export default async function Dashboard() {
       <div className="fixed h-full z-50 w-[272px] max-[866px]:left-[-272px]  duration-300 left-0 bg-background max-tablet:w-[80px] py-4 flex flex-col overflow-hidden transition-all duration-400 border-r border-zinc-200  dark:border-zinc-800">
         <div className="flex h-full flex-col overflow-y-hidden">
           <div className="flex justify-center mb-7">
-            <Link href="/home" className="flex items-center gap-2">
-              <img
+            <Link href="/dashboard" className="flex items-center gap-2">
+              {/* <img
                 alt="logo"
                 loading="lazy"
                 width="25"
@@ -36,8 +36,8 @@ export default async function Dashboard() {
                 srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.3ed2993e.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.3ed2993e.png&amp;w=64&amp;q=75 2x"
                 src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.3ed2993e.png&amp;w=64&amp;q=75"
                 style={convertStyleStringToObject("color: transparent;")}
-              />
-              <img
+              /> */}
+              {/* <img
                 alt="logo"
                 loading="lazy"
                 width="25"
@@ -48,9 +48,9 @@ export default async function Dashboard() {
                 srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white.34e7f103.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white.34e7f103.png&amp;w=64&amp;q=75 2x"
                 src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white.34e7f103.png&amp;w=64&amp;q=75"
                 style={convertStyleStringToObject("color: transparent;")}
-              />
+              /> */}
               <h4 className="scroll-m-20 tracking-tight text-2xl font-black">
-                Feynman AI
+                Noteflow AI
               </h4>
             </Link>
             <button className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 size-9 hidden max-[866px]:flex">

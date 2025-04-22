@@ -11,10 +11,13 @@ function Navbar() {
 
   return (
     <nav className="  shadow-md z-50 flex justify-between items-center px-6 py-4">
-      <div className="font-bold text-xl">TakeNote</div>
+      <div className="font-bold text-xl">NoteFlow AI</div>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6">
+        <a href="dashboard" className="text-gray-600 hover:text-blue-600">
+          Dashboard
+        </a>
         <a href="#how-it-works" className="text-gray-600 hover:text-blue-600">
           Cách hoạt động
         </a>
@@ -27,7 +30,7 @@ function Navbar() {
         <a href="#testimonial" className="text-gray-600 hover:text-blue-600">
           Cảm nhận
         </a>
-        <a href="#newsletter" className="text-gray-600 hover:text-blue-600">
+        <a href="sign-in" className="text-gray-600 hover:text-blue-600">
           Đăng ký
         </a>
       </div>
