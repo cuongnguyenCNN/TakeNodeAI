@@ -24,7 +24,7 @@ export default async function Dashboard() {
       <div className="fixed h-full z-50 w-[272px] max-[866px]:left-[-272px]  duration-300 left-0 bg-background max-tablet:w-[80px] py-4 flex flex-col overflow-hidden transition-all duration-400 border-r border-zinc-200  dark:border-zinc-800">
         <div className="flex h-full flex-col overflow-y-hidden">
           <div className="flex justify-center mb-7">
-            <Link href="/dashboard" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               {/* <img
                 alt="logo"
                 loading="lazy"

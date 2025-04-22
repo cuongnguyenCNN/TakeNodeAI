@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { ReactNode, ButtonHTMLAttributes } from "react";
 import Navbar from "./components/navbar";
+import Link from "next/link";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -121,7 +122,9 @@ export default function Home() {
           văn bản hoặc mind map. Tăng hiệu suất, lưu giữ kiến thức.
         </p>
         <div className="mt-6 flex justify-center gap-4">
-          <CustomButton>Bắt đầu miễn phí</CustomButton>
+          <CustomButton>
+            <Link href="/dashboard">Bắt đầu miễn phí</Link>
+          </CustomButton>
           <CustomButton variant="outline">Nâng cấp Pro</CustomButton>
         </div>
       </header>
@@ -264,7 +267,7 @@ export default function Home() {
           Nâng cấp lên bản Pro
         </CustomButton>
       </section>
-      <section className="py-20 bg-white max-w-6xl mx-auto">
+      {/* <section className="py-20 bg-white max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">💎 Gói dịch vụ</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <PricingCard
@@ -303,7 +306,7 @@ export default function Home() {
             highlight
           />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
