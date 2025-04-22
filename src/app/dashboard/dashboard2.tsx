@@ -45,7 +45,10 @@ export default async function Dashboard2() {
               <nav aria-label="breadcrumb">
                 <ol className="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5">
                   <li className="inline-flex items-center gap-1.5">
-                    <Link className="transition-colors hover:text-foreground flex items-center">
+                    <Link
+                      href=""
+                      className="transition-colors hover:text-foreground flex items-center"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
