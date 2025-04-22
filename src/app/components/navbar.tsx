@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { LucideMenu, LucideX } from "lucide-react";
+import Link from "next/link";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,17 +53,20 @@ function Navbar() {
           <div className="bg-white w-3/4 p-6 absolute right-0 top-0 h-full">
             <ul className="space-y-4">
               <li>
-                <a href="/" className="block text-gray-800 hover:text-blue-600">
+                <Link
+                  href="/"
+                  className="block text-gray-800 hover:text-blue-600"
+                >
                   Trang chủ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/dashboard"
                   className="block text-gray-800 hover:text-blue-600"
                 >
                   Dashboard
-                </a>
+                </Link>
               </li>
               <li>
                 <a
