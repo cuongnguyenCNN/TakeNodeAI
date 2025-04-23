@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SidebarWithFolder from "./sidebarwithfolder";
 
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
