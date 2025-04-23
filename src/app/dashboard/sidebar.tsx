@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-
+import { useEffect, useRef, useState } from "react";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
@@ -17,7 +18,25 @@ function convertStyleStringToObject(styleString: string) {
 
   return styleObject;
 }
-export default async function SideBar() {
+export default function SideBar() {
+  const [folders, setFolders] = useState<string[]>([]);
+  const [showModal, setShowModal] = useState(false);
+  const [newFolderName, setNewFolderName] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleCreateFolder = () => {
+    if (newFolderName.trim() === "") return;
+    setFolders([...folders, newFolderName.trim()]);
+    setNewFolderName("");
+    setShowModal(false);
+  };
+
+  useEffect(() => {
+    if (showModal && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [showModal]);
+
   return (
     <div className="fixed h-full z-50 w-[272px] max-[866px]:left-[-272px]  duration-300 left-0 bg-background max-tablet:w-[80px] py-4 flex flex-col overflow-hidden transition-all duration-400 border-r border-zinc-200  dark:border-zinc-800">
       <div className="flex h-full flex-col overflow-y-hidden">
@@ -129,41 +148,49 @@ export default async function SideBar() {
                         All notes
                       </div>
                       <small className="font-medium text-muted-foreground text-xs">
-                        (3)
+                        (0)
                       </small>
                     </button>
-                    <li
-                      className="list-none"
-                      style={convertStyleStringToObject(
-                        "overflow: hidden; height: auto;"
-                      )}
-                    >
-                      <button className="inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full justify-between">
-                        <div className="flex items-center text-xs">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="15"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            className="lucide lucide-folder-closed mr-2"
-                          >
-                            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
-                            <path d="M2 10h20"></path>
-                          </svg>
-                          hsdh
-                        </div>
-                        <small className="font-medium text-muted-foreground text-xs">
-                          (0)
-                        </small>
-                      </button>
-                    </li>
+                    <ul>
+                      {folders.map((folder, idx) => (
+                        <li
+                          key={idx}
+                          className="list-none"
+                          style={convertStyleStringToObject(
+                            "overflow: hidden; height: auto;"
+                          )}
+                        >
+                          <button className="inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full justify-between">
+                            <div className="flex items-center text-xs">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                className="lucide lucide-folder-closed mr-2"
+                              >
+                                <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+                                <path d="M2 10h20"></path>
+                              </svg>
+                              {folder}
+                            </div>
+                            <small className="font-medium text-muted-foreground text-xs">
+                              (0)
+                            </small>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
                     <div className="absolute bottom-0 left-0 px-4 w-full">
-                      <button className="inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full justify-start bottom-0 left-0">
+                      <button
+                        onClick={() => setShowModal(true)}
+                        className="inline-flex items-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full justify-start bottom-0 left-0"
+                      >
                         <svg
                           className="mr-2"
                           xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +216,46 @@ export default async function SideBar() {
             </div>
           </div>
         </div>
-
+        {showModal && (
+          <div
+            style={{
+              backgroundColor: "rgba(0, 0, 0, .8)",
+            }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black\/80 bg-opacity-30 "
+          >
+            <div className="bg-white p-6 rounded-xl w-[90%] max-w-md shadow-xl relative">
+              <button
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                onClick={() => setShowModal(false)}
+              >
+                ✖️
+              </button>
+              <h3 className="text-lg font-semibold mb-2">Create new folder</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Create a new folder to organize your notes
+              </p>
+              <input
+                ref={inputRef}
+                type="text"
+                className="w-full px-4 py-2 border rounded-md mb-2 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                placeholder="Enter folder name"
+                value={newFolderName}
+                maxLength={25}
+                onChange={(e) => setNewFolderName(e.target.value)}
+              />
+              <div className="text-right text-sm text-gray-400 mb-4">
+                {newFolderName.length}/25
+              </div>
+              <button
+                onClick={handleCreateFolder}
+                style={{ background: "black" }}
+                className="w-full  text-white px-4 py-2 rounded-md hover:bg-gray-800 transition"
+              >
+                Create
+              </button>
+            </div>
+          </div>
+        )}
         <div className="w-full justify-center items-center flex gap-5">
           <Link target="_blank" href="mailto:support@notewave.app">
             <button className="active:scale-110 transition-all duration-100">
