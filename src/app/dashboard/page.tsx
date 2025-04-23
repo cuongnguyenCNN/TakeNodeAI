@@ -4,7 +4,6 @@ import "../../css/21527cccdd6ccf0f.css";
 import "../../css/b81a822ef496e877.css";
 
 import "../../css/be7c40c9332f48ab.css";
-import Modal from "../components/modal";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
