@@ -183,7 +183,6 @@ export default async function SideBar() {
                         </svg>
                         Create new folder
                       </button>
-                      {/* <SidebarWithFolder></SidebarWithFolder> */}
                     </div>
                   </div>
                 </div>

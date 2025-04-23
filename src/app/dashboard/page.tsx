@@ -1,7 +1,10 @@
 import Link from "next/link";
 import SideBar from "./sidebar";
 import SidebarWithFolder from "./sidebarwithfolder";
+import "../../css/21527cccdd6ccf0f.css";
+import "../../css/b81a822ef496e877.css";
 
+import "../../css/be7c40c9332f48ab.css";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
@@ -23,7 +26,7 @@ export default async function Dashboard() {
   return (
     <div className="flex">
       <SideBar></SideBar>
-      <SidebarWithFolder></SidebarWithFolder>
+      {/* <SidebarWithFolder></SidebarWithFolder> */}
       <div className="transition-all w-full h-full  flex flex-col  duration-400 pl-[272px] max-[866px]:pl-0 max-tablet:pl-0">
         <div className="flex w-full flex-col px-8 max-[600px]:px-4 !flex-row pl-0">
           <div className="w-full py-6 flex flex-col mx-8 max-[600px]:mx-0 h-screen">
