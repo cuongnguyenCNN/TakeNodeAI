@@ -44,3 +44,8 @@ body {
 [data-radix-scroll-area-viewport]::-webkit-scrollbar {
   display: none
 }
+
+.animate-pulse {
+  --pulse-color: #0096ff;
+  --duration: 1.5s
+}

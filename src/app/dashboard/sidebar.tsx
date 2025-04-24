@@ -2,6 +2,9 @@
 import { jwtDecode } from "jwt-decode";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import ProfileModal from "../components/profilemodal";
+import Pricing from "../components/pricing";
+import PricingModal from "../components/pricingModal";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
@@ -30,7 +33,8 @@ export default function SideBar() {
   const [showModal, setShowModal] = useState(false);
   const [newFolderName, setNewFolderName] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-
+  const [open, setOpen] = useState(false);
+  const [openPricingModal, setOpenPricingModal] = useState(false);
   const handleCreateFolder = () => {
     if (newFolderName.trim() === "") return;
     setFolders([...folders, newFolderName.trim()]);
@@ -43,7 +47,7 @@ export default function SideBar() {
       inputRef.current.focus();
     }
     if (typeof window !== "undefined") {
-      const user: GoogleUser = jwtDecode(
+      let user: GoogleUser = jwtDecode(
         localStorage.getItem("token_user") ?? ""
       );
       setUsers(user);
@@ -306,7 +310,10 @@ export default function SideBar() {
         >
           <div className="rounded-lg border bg-card text-card-foreground shadow-sm mb-3 mx-4">
             <div className="p-6 py-4 flex justify-center items-center flex-col px-3">
-              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2">
+              <button
+                onClick={() => setOpenPricingModal(true)}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2"
+              >
                 <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black"></span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -390,6 +397,10 @@ export default function SideBar() {
             </div>
           </div>
         </div>
+        <PricingModal
+          isOpen={openPricingModal}
+          onClose={() => setOpenPricingModal(false)}
+        />
         <div className="rounded-lg border bg-card text-card-foreground shadow-sm mb-4 mx-4">
           <div className="p-6 py-3 flex justify-between w-full px-3">
             <div className="flex items-center flex-1 gap-2 ">
@@ -408,7 +419,10 @@ export default function SideBar() {
                 </small>
               </div>
             </div>
-            <button className="active:scale-110 transition-all duration-100">
+            <button
+              onClick={() => setOpen(true)}
+              className="active:scale-110 transition-all duration-100"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -425,6 +439,11 @@ export default function SideBar() {
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
             </button>
+            <ProfileModal
+              isOpen={open}
+              onClose={() => setOpen(false)}
+              googleuser={user}
+            />
           </div>
         </div>
       </div>
