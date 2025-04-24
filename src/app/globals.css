@@ -49,3 +49,13 @@ body {
   --pulse-color: #0096ff;
   --duration: 1.5s
 }
+
+[data-radix-scroll-area-viewport] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+[data-radix-scroll-area-viewport]::-webkit-scrollbar {
+  display: none
+}

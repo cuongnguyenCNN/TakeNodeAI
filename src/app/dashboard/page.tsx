@@ -25,7 +25,6 @@ function convertStyleStringToObject(styleString: string) {
 export default async function Dashboard() {
   return (
     <div className="flex">
-      <SideBar></SideBar>
       <div className="transition-all w-full h-full  flex flex-col  duration-400 pl-[272px] max-[866px]:pl-0 max-tablet:pl-0">
         <div className="flex w-full flex-col px-8 max-[600px]:px-4 !flex-row pl-0">
           <div className="w-full py-6 flex flex-col mx-8 max-[600px]:mx-0 h-screen">
@@ -53,7 +52,7 @@ export default async function Dashboard() {
                   <ol className="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5">
                     <li className="inline-flex items-center gap-1.5">
                       <Link
-                        href=""
+                        href="/dashboard"
                         className="transition-colors hover:text-foreground flex items-center"
                       >
                         <svg
@@ -143,87 +142,89 @@ export default async function Dashboard() {
                         "overflow: hidden; height: auto;"
                       )}
                     >
-                      <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
-                        <div className="p-6 py-4 flex items-center justify-between">
-                          <div className="flex-1">
-                            <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
-                              Pacific DeFi: A New Decentralized Finance
-                              Ecosystem
-                            </h4>
-                            <p className="text-sm text-muted-foreground">
-                              An overview of the Pacific DeFi project, its
-                              ecosystem, phases, and features.
-                            </p>
-                            <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">
-                              <div className="flex items-center gap-2">
-                                <button
-                                  className="flex items-center"
-                                  type="button"
-                                  id="radix-:r16:"
-                                  aria-haspopup="menu"
-                                  aria-expanded="false"
-                                  data-state="closed"
-                                >
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    className="lucide lucide-folder-plus mr-1 "
-                                  >
-                                    <path d="M12 10v6"></path>
-                                    <path d="M9 13h6"></path>
-                                    <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
-                                  </svg>
-                                  <small className="text-sm font-medium leading-none">
-                                    Add folder
-                                  </small>
-                                </button>
-                                <div className="flex items-center">
-                                  <img
-                                    alt="pdf"
-                                    loading="lazy"
-                                    width="512"
-                                    height="512"
-                                    decoding="async"
-                                    data-nimg="1"
-                                    className="mr-1 size-5"
-                                    src="/_next/static/media/pdf.bc7ff215.svg"
-                                    style={convertStyleStringToObject(
-                                      "color: transparent;"
-                                    )}
-                                  />
-                                  <small className="text-sm font-medium leading-none">
-                                    PDF
-                                  </small>
-                                </div>
-                              </div>
-                              <p className="text-xs text-muted-foreground">
-                                20 Apr 2025, 09:55 PM
+                      <Link href="/dashboard/notes">
+                        <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
+                          <div className="p-6 py-4 flex items-center justify-between">
+                            <div className="flex-1">
+                              <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
+                                Pacific DeFi: A New Decentralized Finance
+                                Ecosystem
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                An overview of the Pacific DeFi project, its
+                                ecosystem, phases, and features.
                               </p>
+                              <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    className="flex items-center"
+                                    type="button"
+                                    id="radix-:r16:"
+                                    aria-haspopup="menu"
+                                    aria-expanded="false"
+                                    data-state="closed"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      className="lucide lucide-folder-plus mr-1 "
+                                    >
+                                      <path d="M12 10v6"></path>
+                                      <path d="M9 13h6"></path>
+                                      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+                                    </svg>
+                                    <small className="text-sm font-medium leading-none">
+                                      Add folder
+                                    </small>
+                                  </button>
+                                  <div className="flex items-center">
+                                    <img
+                                      alt="pdf"
+                                      loading="lazy"
+                                      width="512"
+                                      height="512"
+                                      decoding="async"
+                                      data-nimg="1"
+                                      className="mr-1 size-5"
+                                      src="/_next/static/media/pdf.bc7ff215.svg"
+                                      style={convertStyleStringToObject(
+                                        "color: transparent;"
+                                      )}
+                                    />
+                                    <small className="text-sm font-medium leading-none">
+                                      PDF
+                                    </small>
+                                  </div>
+                                </div>
+                                <p className="text-xs text-muted-foreground">
+                                  20 Apr 2025, 09:55 PM
+                                </p>
+                              </div>
                             </div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
+                            >
+                              <path d="m9 18 6-6-6-6"></path>
+                            </svg>
                           </div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
-                          >
-                            <path d="m9 18 6-6-6-6"></path>
-                          </svg>
                         </div>
-                      </div>
+                      </Link>
                     </li>
                     <li
                       className="list-none"
@@ -231,88 +232,90 @@ export default async function Dashboard() {
                         "overflow: hidden; height: auto;"
                       )}
                     >
-                      <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
-                        <div className="p-6 py-4 flex items-center justify-between">
-                          <div className="flex-1">
-                            <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
-                              Bodyweight vs. Barbells: Which Training Method is
-                              Best for You?
-                            </h4>
-                            <p className="text-sm text-muted-foreground">
-                              A detailed comparison of calisthenics and
-                              weightlifting, exploring their pros, cons, and
-                              effectiveness for different fitness goals.
-                            </p>
-                            <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">
-                              <div className="flex items-center gap-2">
-                                <button
-                                  className="flex items-center"
-                                  type="button"
-                                  id="radix-:r19:"
-                                  aria-haspopup="menu"
-                                  aria-expanded="false"
-                                  data-state="closed"
-                                >
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    className="lucide lucide-folder-plus mr-1 "
-                                  >
-                                    <path d="M12 10v6"></path>
-                                    <path d="M9 13h6"></path>
-                                    <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
-                                  </svg>
-                                  <small className="text-sm font-medium leading-none">
-                                    Add folder
-                                  </small>
-                                </button>
-                                <div className="flex items-center">
-                                  <svg
-                                    className="mr-1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                  >
-                                    <path
-                                      fill="red"
-                                      d="M17 4H7C4 4 2 6 2 9v6c0 3 2 5 5 5h10c3 0 5-2 5-5V9c0-3-2-5-5-5zm-3.11 9.03l-2.47 1.48c-1 .6-1.82.14-1.82-1.03v-2.97c0-1.17.82-1.63 1.82-1.03l2.47 1.48c.95.58.95 1.5 0 2.07z"
-                                    ></path>
-                                  </svg>
-                                  <small className="text-sm font-medium leading-none">
-                                    Youtube video
-                                  </small>
-                                </div>
-                              </div>
-                              <p className="text-xs text-muted-foreground">
-                                20 Apr 2025, 09:50 PM
+                      <Link href="/dashboard/notes">
+                        <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
+                          <div className="p-6 py-4 flex items-center justify-between">
+                            <div className="flex-1">
+                              <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
+                                Bodyweight vs. Barbells: Which Training Method
+                                is Best for You?
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                A detailed comparison of calisthenics and
+                                weightlifting, exploring their pros, cons, and
+                                effectiveness for different fitness goals.
                               </p>
+                              <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    className="flex items-center"
+                                    type="button"
+                                    id="radix-:r19:"
+                                    aria-haspopup="menu"
+                                    aria-expanded="false"
+                                    data-state="closed"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      className="lucide lucide-folder-plus mr-1 "
+                                    >
+                                      <path d="M12 10v6"></path>
+                                      <path d="M9 13h6"></path>
+                                      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+                                    </svg>
+                                    <small className="text-sm font-medium leading-none">
+                                      Add folder
+                                    </small>
+                                  </button>
+                                  <div className="flex items-center">
+                                    <svg
+                                      className="mr-1"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                    >
+                                      <path
+                                        fill="red"
+                                        d="M17 4H7C4 4 2 6 2 9v6c0 3 2 5 5 5h10c3 0 5-2 5-5V9c0-3-2-5-5-5zm-3.11 9.03l-2.47 1.48c-1 .6-1.82.14-1.82-1.03v-2.97c0-1.17.82-1.63 1.82-1.03l2.47 1.48c.95.58.95 1.5 0 2.07z"
+                                      ></path>
+                                    </svg>
+                                    <small className="text-sm font-medium leading-none">
+                                      Youtube video
+                                    </small>
+                                  </div>
+                                </div>
+                                <p className="text-xs text-muted-foreground">
+                                  20 Apr 2025, 09:50 PM
+                                </p>
+                              </div>
                             </div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
+                            >
+                              <path d="m9 18 6-6-6-6"></path>
+                            </svg>
                           </div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
-                          >
-                            <path d="m9 18 6-6-6-6"></path>
-                          </svg>
                         </div>
-                      </div>
+                      </Link>
                     </li>
                     <li
                       className="list-none"
@@ -320,91 +323,93 @@ export default async function Dashboard() {
                         "overflow: hidden; height: auto;"
                       )}
                     >
-                      <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
-                        <div className="p-6 py-4 flex items-center justify-between">
-                          <div className="flex-1">
-                            <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
-                              Welcome to Feynman AI: Your Study and Work
-                              Companion
-                            </h4>
-                            <p className="text-sm text-muted-foreground">
-                              A powerful tool for transforming recordings and
-                              PDFs into organized notes using the Feynman
-                              technique.
-                            </p>
-                            <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">
-                              <div className="flex items-center gap-2">
-                                <button
-                                  className="flex items-center"
-                                  type="button"
-                                  id="radix-:r1c:"
-                                  aria-haspopup="menu"
-                                  aria-expanded="false"
-                                  data-state="closed"
-                                >
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    className="lucide lucide-folder-plus mr-1 "
-                                  >
-                                    <path d="M12 10v6"></path>
-                                    <path d="M9 13h6"></path>
-                                    <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
-                                  </svg>
-                                  <small className="text-sm font-medium leading-none">
-                                    Add folder
-                                  </small>
-                                </button>
-                                <div className="flex items-center">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    className="lucide lucide-text mr-1 "
-                                  >
-                                    <path d="M17 6.1H3"></path>
-                                    <path d="M21 12.1H3"></path>
-                                    <path d="M15.1 18H3"></path>
-                                  </svg>
-                                  <small className="text-sm font-medium leading-none">
-                                    Copy text
-                                  </small>
-                                </div>
-                              </div>
-                              <p className="text-xs text-muted-foreground">
-                                10 Nov 2024, 01:08 AM
+                      <Link href="/dashboard/notes">
+                        <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
+                          <div className="p-6 py-4 flex items-center justify-between">
+                            <div className="flex-1">
+                              <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
+                                Welcome to Feynman AI: Your Study and Work
+                                Companion
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                A powerful tool for transforming recordings and
+                                PDFs into organized notes using the Feynman
+                                technique.
                               </p>
+                              <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    className="flex items-center"
+                                    type="button"
+                                    id="radix-:r1c:"
+                                    aria-haspopup="menu"
+                                    aria-expanded="false"
+                                    data-state="closed"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      className="lucide lucide-folder-plus mr-1 "
+                                    >
+                                      <path d="M12 10v6"></path>
+                                      <path d="M9 13h6"></path>
+                                      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+                                    </svg>
+                                    <small className="text-sm font-medium leading-none">
+                                      Add folder
+                                    </small>
+                                  </button>
+                                  <div className="flex items-center">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      className="lucide lucide-text mr-1 "
+                                    >
+                                      <path d="M17 6.1H3"></path>
+                                      <path d="M21 12.1H3"></path>
+                                      <path d="M15.1 18H3"></path>
+                                    </svg>
+                                    <small className="text-sm font-medium leading-none">
+                                      Copy text
+                                    </small>
+                                  </div>
+                                </div>
+                                <p className="text-xs text-muted-foreground">
+                                  10 Nov 2024, 01:08 AM
+                                </p>
+                              </div>
                             </div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
+                            >
+                              <path d="m9 18 6-6-6-6"></path>
+                            </svg>
                           </div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
-                          >
-                            <path d="m9 18 6-6-6-6"></path>
-                          </svg>
                         </div>
-                      </div>
+                      </Link>
                     </li>
                   </div>
                 </div>
