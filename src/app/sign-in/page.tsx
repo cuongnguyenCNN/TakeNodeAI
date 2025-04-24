@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import LanguageSelector from "../components/languageselector";
-import { useGoogleLogin } from "@react-oauth/google";
 import { setCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
 import {
@@ -10,7 +9,6 @@ import {
   CredentialResponse,
 } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-import { useNavigate } from "react-router-dom";
 
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
@@ -35,7 +33,7 @@ type GoogleUser = {
   picture: string;
   email: string;
 };
-export default async function SignIn() {
+export default function SignIn() {
   const router = useRouter();
 
   const handleSuccess = (response: CredentialResponse) => {
@@ -111,23 +109,6 @@ export default async function SignIn() {
   //   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   // };
 
-  // const handleSuccess = (response: string) => {
-  //   const id_token = response.credential; // You can decode the JWT token to get user info
-  //   const user = jwtDecode(id_token);
-  //   const userName = user.name;
-  //   localStorage.setItem("token_user", id_token);
-  //   localStorage.setItem("user_name_info", user.name);
-  //   localStorage.setItem("user_image_info", user.picture);
-  //   setCookie("google-videobridge-auth-token", id_token, 7);
-  //   console.log("User Info:", id_token);
-  //   console.log("User Info:", user.name);
-  //   fetchYouTubeData(id_token);
-  //   navigate("/dashboard");
-  // };
-
-  const handleFailure = (error: string) => {
-    console.log("Login Failed:", error);
-  };
   return (
     <div className=" flex h-screen w-screen flex-col items-center justify-center">
       <div className="max-w-[1300px] w-full relative h-full flex flex-col items-center justify-center">
