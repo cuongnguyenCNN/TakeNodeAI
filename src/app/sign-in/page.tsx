@@ -9,6 +9,7 @@ import {
   CredentialResponse,
 } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
+import { useEffect } from "react";
 
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
@@ -108,7 +109,12 @@ export default function SignIn() {
   // const deleteCookie = (name: string) => {
   //   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   // };
-
+  useEffect(() => {
+    const token = localStorage.getItem("token_user");
+    if (token) {
+      router.push("/dashboard");
+    }
+  }, []);
   return (
     <div className=" flex h-screen w-screen flex-col items-center justify-center">
       <div className="max-w-[1300px] w-full relative h-full flex flex-col items-center justify-center">
