@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import PricingModal from "./pricingModal";
 type GoogleUser = {
   name: string;
   picture: string;
@@ -31,6 +32,7 @@ export default function ProfileModal({
   onClose,
   googleuser,
 }: ProfileModalProps) {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -162,7 +164,10 @@ export default function ProfileModal({
                     free
                   </small>
                 </div>
-                <button className="active:scale-110 transition-all duration-100">
+                <button
+                  onClick={() => setIsOpenModal(true)}
+                  className="active:scale-110 transition-all duration-100"
+                >
                   <button className="relative text-center cursor-pointer flex justify-center animate-pulse items-center rounded-lg text-white dark:text-black bg-blue-500 dark:bg-blue-500 px-4 py-2 h-[32px]">
                     <div className="relative z-10 ">
                       <div className="flex items-center">
@@ -191,6 +196,10 @@ export default function ProfileModal({
               </div>
             </div>
           </div>
+          <PricingModal
+            isOpen={isOpenModal}
+            onClose={() => setIsOpenModal(false)}
+          ></PricingModal>
           <div className="">
             <h2
               id="radix-:rk:"

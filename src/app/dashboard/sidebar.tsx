@@ -3,7 +3,6 @@ import { jwtDecode } from "jwt-decode";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import ProfileModal from "../components/profilemodal";
-import Pricing from "../components/pricing";
 import PricingModal from "../components/pricingModal";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
@@ -47,7 +46,7 @@ export default function SideBar() {
       inputRef.current.focus();
     }
     if (typeof window !== "undefined") {
-      let user: GoogleUser = jwtDecode(
+      const user: GoogleUser = jwtDecode(
         localStorage.getItem("token_user") ?? ""
       );
       setUsers(user);
@@ -274,7 +273,7 @@ export default function SideBar() {
           </div>
         )}
         <div className="w-full justify-center items-center flex gap-5">
-          <Link target="_blank" href="mailto:support@notewave.app">
+          <Link target="_blank" href="mailto:cuongnguyen71195@gmail.com">
             <button className="active:scale-110 transition-all duration-100">
               <div className="flex flex-col items-center">
                 <svg
