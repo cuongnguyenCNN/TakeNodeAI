@@ -4,6 +4,7 @@ import "../../css/21527cccdd6ccf0f.css";
 import "../../css/b81a822ef496e877.css";
 
 import "../../css/be7c40c9332f48ab.css";
+import YoutubeModal from "../components/youtubemodal";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
@@ -113,74 +114,8 @@ export default async function Dashboard() {
             <p className="text-sm text-muted-foreground">
               Record your thoughts, ideas, and tasks in a note. You can also add
             </p>
-            <div className="flex items-center max-[600px]:flex-col max-[600px]:gap-3 gap-3 ">
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 mt-6 max-[600px]:mt-6 max-[600px]:w-full bg-red-500 hover:bg-red-600 text-white">
-                <svg
-                  className="mr-2 "
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M11.969 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.47-10-10-10Zm.03 14.23c-2.34 0-4.23-1.89-4.23-4.23 0-2.34 1.89-4.23 4.23-4.23 2.34 0 4.23 1.89 4.23 4.23 0 2.34-1.89 4.23-4.23 4.23Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                Record audio
-              </button>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="lucide lucide-cloud-upload mr-2"
-                >
-                  <path d="M12 13v8"></path>
-                  <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
-                  <path d="m8 17 4-4 4 4"></path>
-                </svg>
-                Upload audio
-              </button>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full">
-                <img
-                  alt="PDF"
-                  loading="lazy"
-                  width="20"
-                  height="20"
-                  decoding="async"
-                  data-nimg="1"
-                  className="mr-2"
-                  srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf-icon.213e54c4.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf-icon.213e54c4.png&amp;w=48&amp;q=75 2x"
-                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf-icon.213e54c4.png&amp;w=48&amp;q=75"
-                  style={convertStyleStringToObject("color: transparent;")}
-                />
-                Upload PDF
-              </button>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full">
-                <svg
-                  className="mr-2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M17 4H7C4 4 2 6 2 9v6c0 3 2 5 5 5h10c3 0 5-2 5-5V9c0-3-2-5-5-5zm-3.11 9.03l-2.47 1.48c-1 .6-1.82.14-1.82-1.03v-2.97c0-1.17.82-1.63 1.82-1.03l2.47 1.48c.95.58.95 1.5 0 2.07z"
-                  ></path>
-                </svg>
-                YouTube video
-              </button>
-            </div>
+
+            <YoutubeModal></YoutubeModal>
             <h3 className="scroll-m-20 text-2xl tracking-tight font-bold mb-2 mt-7">
               My notes
             </h3>

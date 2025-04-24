@@ -1,5 +1,16 @@
+"use client";
 import Link from "next/link";
 import LanguageSelector from "../components/languageselector";
+import { useGoogleLogin } from "@react-oauth/google";
+import { setCookie } from "cookies-next";
+import { useRouter } from "next/navigation";
+import {
+  GoogleOAuthProvider,
+  GoogleLogin,
+  CredentialResponse,
+} from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
@@ -18,80 +29,115 @@ function convertStyleStringToObject(styleString: string) {
 
   return styleObject;
 }
+
+type GoogleUser = {
+  name: string;
+  picture: string;
+  email: string;
+};
 export default async function SignIn() {
+  const router = useRouter();
+
+  const handleSuccess = (response: CredentialResponse) => {
+    const id_token = response.credential;
+
+    if (!id_token) {
+      console.error("Không có id_token");
+      return;
+    }
+
+    const user: GoogleUser = jwtDecode(id_token);
+    localStorage.setItem("token_user", id_token);
+    localStorage.setItem("user_name_info", user.name);
+    localStorage.setItem("user_image_info", user.picture);
+    localStorage.setItem("user_email_info", user.email);
+    setCookie("google-videobridge-auth-token", id_token, {
+      maxAge: 60 * 60 * 24 * 7,
+    }); // 7 ngày
+
+    console.log("User Info:", user);
+
+    // Gọi API lấy data YouTube từ id_token nếu cần
+    // fetchYouTubeData(id_token); // <-- bạn cần định nghĩa hàm này
+
+    router.push("/dashboard");
+  };
+  // const navigate = useNavigate();
+  // const fetchYouTubeData = (accessToken: string) => {
+  //   fetch(
+  //     "https://www.googleapis.com/youtube/v3/subscriptions?part=snippet&mine=true",
+  //     {
+  //       method: "GET",
+  //       headers: {
+  //         Authorization: `Bearer ${accessToken}`,
+  //       },
+  //     }
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log("YouTube Subscriptions:", data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching YouTube data:", error);
+  //     });
+  // };
+
+  // const login = useGoogleLogin({
+  //   onSuccess: async (tokenResponse) => {
+  //     const id_token = tokenResponse.access_token;
+  //     const user: any = jwtDecode(id_token);
+
+  //     localStorage.setItem("token_user", id_token);
+  //     localStorage.setItem("user_name_info", user.name);
+  //     localStorage.setItem("user_image_info", user.picture);
+  //     // setCookie("google-videobridge-auth-token", id_token, { expires: 7 });
+
+  //     console.log("User:", user);
+
+  //     // Gọi hàm xử lý hoặc fetch video notes nếu cần
+  //     // await fetchYouTubeNoteByAI(id_token);
+
+  //     router.push("/dashboard");
+  //   },
+  //   onError: () => console.error("Google Login Failed"),
+  // });
+  // const setCookie = (name: string, value: string, days: number) => {
+  //   const date = new Date();
+  //   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  //   const expires = `expires=${date.toUTCString()}`;
+  //   document.cookie = `${name}=${value}; ${expires}; path=/`;
+  // };
+  // const deleteCookie = (name: string) => {
+  //   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+  // };
+
+  // const handleSuccess = (response: string) => {
+  //   const id_token = response.credential; // You can decode the JWT token to get user info
+  //   const user = jwtDecode(id_token);
+  //   const userName = user.name;
+  //   localStorage.setItem("token_user", id_token);
+  //   localStorage.setItem("user_name_info", user.name);
+  //   localStorage.setItem("user_image_info", user.picture);
+  //   setCookie("google-videobridge-auth-token", id_token, 7);
+  //   console.log("User Info:", id_token);
+  //   console.log("User Info:", user.name);
+  //   fetchYouTubeData(id_token);
+  //   navigate("/dashboard");
+  // };
+
+  const handleFailure = (error: string) => {
+    console.log("Login Failed:", error);
+  };
   return (
     <div className=" flex h-screen w-screen flex-col items-center justify-center">
       <div className="max-w-[1300px] w-full relative h-full flex flex-col items-center justify-center">
         <div className="absolute top-8 flex justify-between items-center w-full">
           <Link className="flex items-center  gap-2" href="/">
-            {/* <img
-              alt="logo"
-              loading="lazy"
-              width="45"
-              height="45"
-              decoding="async"
-              data-nimg="1"
-              className="object-contain dark:hidden rounded-xl"
-              srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black-bg.4b52f545.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black-bg.4b52f545.png&amp;w=96&amp;q=75 2x"
-              src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black-bg.4b52f545.png&amp;w=96&amp;q=75"
-            />
-            <img
-              alt="logo"
-              loading="lazy"
-              width="45"
-              height="45"
-              decoding="async"
-              data-nimg="1"
-              className="object-contain hidden dark:block rounded-xl"
-              srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=96&amp;q=75 2x"
-              src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white-bg.4381ebc9.png&amp;w=96&amp;q=75"
-              style={convertStyleStringToObject("color: transparent;")}
-            /> */}
             <h4 className="scroll-m-20 tracking-tight text-2xl font-black">
               Noteflow AI
             </h4>
           </Link>
           <div>
-            {/* <button
-              type="button"
-              id="radix-:r0:"
-              aria-haspopup="menu"
-              aria-expanded="false"
-              data-state="closed"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-globe mr-2"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                <path d="M2 12h20"></path>
-              </svg>
-              English
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-chevron-down ml-2"
-              >
-                <path d="m6 9 6 6 6-6"></path>
-              </svg>
-            </button> */}
             <LanguageSelector />
           </div>
         </div>
@@ -333,24 +379,33 @@ export default async function SignIn() {
           </div>
           <div className="grid gap-6">
             <div className="flex flex-col gap-2">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8"
-              >
-                <img
-                  alt="icon"
-                  loading="lazy"
-                  width="20"
-                  height="20"
-                  decoding="async"
-                  data-nimg="1"
-                  className="mr-2"
-                  srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle-icon.4a3e368d.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle-icon.4a3e368d.png&amp;w=48&amp;q=75 2x"
-                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle-icon.4a3e368d.png&amp;w=48&amp;q=75"
-                  style={convertStyleStringToObject("color: transparent;")}
-                />{" "}
-                Continue with Google
-              </button>
+              {/* <button
+                  onClick={() => login()}
+                  type="button"
+                  className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8"
+                >
+                  <img
+                    alt="icon"
+                    loading="lazy"
+                    width="20"
+                    height="20"
+                    decoding="async"
+                    data-nimg="1"
+                    className="mr-2"
+                    srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle-icon.4a3e368d.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle-icon.4a3e368d.png&amp;w=48&amp;q=75 2x"
+                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle-icon.4a3e368d.png&amp;w=48&amp;q=75"
+                    style={convertStyleStringToObject("color: transparent;")}
+                  />{" "}
+                  Continue with Google
+                </button> */}
+              <GoogleOAuthProvider clientId="668441206996-3bpbdpghb2qmpfdqv4cl26p4qhmn5v4j.apps.googleusercontent.com">
+                <GoogleLogin
+                  onSuccess={handleSuccess}
+                  onError={() => {
+                    console.log("Login Failed");
+                  }}
+                />
+              </GoogleOAuthProvider>
               <button
                 type="button"
                 className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8"

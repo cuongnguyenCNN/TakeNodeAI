@@ -383,15 +383,15 @@ export default function SideBar() {
               <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
                 <img
                   className="aspect-square h-full w-full"
-                  src="https://lh3.googleusercontent.com/a/ACg8ocJX9IHRDYcCK_coJIx7ueRGHMiyCLZQ1xAtPOiRpRoPxV89p4dl=s96-c"
+                  src={localStorage.getItem("user_image_info") ?? ""}
                 />
               </span>
               <div className="flex flex-col w-[140px]">
                 <small className="text-sm font-medium leading-none truncate">
-                  <b>Dell Lion</b>
+                  <b> {localStorage.getItem("user_name_info")}</b>
                 </small>
                 <small className="font-medium text-muted-foreground text-xs truncate">
-                  cuongnguyen71195@gmail.com
+                  {localStorage.getItem("user_email_info")}
                 </small>
               </div>
             </div>
