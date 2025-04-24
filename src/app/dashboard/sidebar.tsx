@@ -1,4 +1,5 @@
 "use client";
+import { jwtDecode } from "jwt-decode";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 function convertStyleStringToObject(styleString: string) {
@@ -18,8 +19,14 @@ function convertStyleStringToObject(styleString: string) {
 
   return styleObject;
 }
+type GoogleUser = {
+  name: string;
+  picture: string;
+  email: string;
+};
 export default function SideBar() {
   const [folders, setFolders] = useState<string[]>([]);
+  const [user, setUsers] = useState<GoogleUser>();
   const [showModal, setShowModal] = useState(false);
   const [newFolderName, setNewFolderName] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -34,6 +41,12 @@ export default function SideBar() {
   useEffect(() => {
     if (showModal && inputRef.current) {
       inputRef.current.focus();
+    }
+    if (typeof window !== "undefined") {
+      const user: GoogleUser = jwtDecode(
+        localStorage.getItem("token_user") ?? ""
+      );
+      setUsers(user);
     }
   }, [showModal]);
 
@@ -383,15 +396,15 @@ export default function SideBar() {
               <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
                 <img
                   className="aspect-square h-full w-full"
-                  src={localStorage.getItem("user_image_info") ?? ""}
+                  src={user?.picture}
                 />
               </span>
               <div className="flex flex-col w-[140px]">
                 <small className="text-sm font-medium leading-none truncate">
-                  <b> {localStorage.getItem("user_name_info")}</b>
+                  <b> {user?.name}</b>
                 </small>
                 <small className="font-medium text-muted-foreground text-xs truncate">
-                  {localStorage.getItem("user_email_info")}
+                  {user?.email}
                 </small>
               </div>
             </div>
