@@ -755,6 +755,7 @@ export default function NoteDetail() {
       {activeTab === "quiz" && (
         <Quiz initialQuestions={initialQuestions}></Quiz>
       )}
+      {activeTab === "flashcards" && <FlashcardQuiz></FlashcardQuiz>}
     </>
   );
 }
