@@ -322,17 +322,17 @@ export default async function Dashboard() {
                         "overflow: hidden; height: auto;"
                       )}
                     >
-                      <Link href="/dashboard/notes">
+                      <Link href="/dashboard/notes/0">
                         <div className="rounded-lg border bg-card text-card-foreground shadow-sm cursor-pointer hover:shadow-lg transition-all duration-200 group">
                           <div className="p-6 py-4 flex items-center justify-between">
                             <div className="flex-1">
                               <h4 className="scroll-m-20 text-xl tracking-tight font-bold">
-                                Welcome to Feynman AI: Your Study and Work
+                                Welcome to NoteFlow AI: Your Study and Work
                                 Companion
                               </h4>
                               <p className="text-sm text-muted-foreground">
                                 A powerful tool for transforming recordings and
-                                PDFs into organized notes using the Feynman
+                                PDFs into organized notes using the NoteFlow
                                 technique.
                               </p>
                               <div className="flex max-[600px]:flex-col max-[600px]:items-start max-[600px]:gap-2 justify-between items-center mt-2">

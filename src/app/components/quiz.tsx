@@ -2,92 +2,18 @@
 
 import { useState } from "react";
 
-const initialQuestions = [
-  {
-    question: "Which blockchain will Pacific DeFi initially operate on?",
-    options: ["Ethereum", "Binance Smart Chain", "Polygon", "Solana"],
-    correct: 1,
-  },
-  {
-    question: "What is the mission of Pacific DeFi?",
-    options: [
-      "Replace banks with DeFi platforms",
-      "Offer meme coin trading",
-      "Provide secure yield products for stablecoins and altcoins",
-      "Create a decentralized gaming ecosystem",
-    ],
-    correct: 2,
-  },
-  {
-    question:
-      "What percentage of PACIFIC tokens is allocated to the liquidity pool rewards?",
-    options: ["10%", "20%", "30%", "40%"],
-    correct: 2,
-  },
-  {
-    question: "Which feature is **not** part of Pacific DeFi’s product suite?",
-    options: [
-      "Lending & borrowing",
-      "Auto-staking vaults",
-      "NFT marketplace",
-      "Token swap platform",
-    ],
-    correct: 2,
-  },
-  {
-    question:
-      "What is a key benefit of single-token auto-staking in Pacific DeFi?",
-    options: [
-      "Requires multi-token deposits",
-      "Provides yield and spreads risk",
-      "Only supports Ethereum-based tokens",
-      "Generates NFTs as rewards",
-    ],
-    correct: 1,
-  },
-  {
-    question: "Which network will Pacific DeFi **not** initially support?",
-    options: [
-      "Binance Smart Chain",
-      "KuCoin Community Chain",
-      "Polygon",
-      "Cardano",
-    ],
-    correct: 3,
-  },
-  {
-    question:
-      "What percentage of profits will Pacific DeFi commit to environmental efforts?",
-    options: ["1%", "2%", "5%", "10%"],
-    correct: 1,
-  },
-  {
-    question: "What is the total supply of the PACIFIC token?",
-    options: ["10,000,000", "50,000,000", "100,000,000", "500,000,000"],
-    correct: 2,
-  },
-  {
-    question:
-      "What type of vault in Pacific DeFi has a 3% withdrawal and 10% auto-compound fee?",
-    options: [
-      "Single Vault: PACIFIC",
-      "Time-locked Vaults",
-      "Polygon Staking Vault",
-      "NFT Farming Vault",
-    ],
-    correct: 0,
-  },
-  {
-    question: "Which development phase introduces the mobile app?",
-    options: ["Phase 1", "Phase 2", "Phase 3", "Post-launch"],
-    correct: 2,
-  },
-];
 function shuffleArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
 }
-
-export default function Quiz() {
+type QuizQuestion = {
+  question: string;
+  options: string[];
+  correct: number;
+};
+type QuizProps = {
+  initialQuestions: QuizQuestion[];
+};
+export default function Quiz({ initialQuestions }: QuizProps) {
   const [questions, setQuestions] = useState(() =>
     shuffleArray(initialQuestions)
   );
