@@ -111,27 +111,224 @@ function PricingCard({
 
 export default function Home() {
   return (
+    // <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-4 md:p-8">
+    //   <Navbar></Navbar>
+    //   <header className="text-center mb-12">
+    //     <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+    //       NoteFlow AI
+    //     </h1>
+    //     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+    //       Ghi chú thông minh từ video, PDF, YouTube, và bản ghi âm — dưới dạng
+    //       văn bản hoặc mind map. Tăng hiệu suất, lưu giữ kiến thức.
+    //     </p>
+    //     <div className="mt-6 flex justify-center gap-4">
+    //       <CustomButton>
+    //         <Link href="/dashboard">Bắt đầu miễn phí</Link>
+    //       </CustomButton>
+    //       <CustomButton variant="outline">Nâng cấp Pro</CustomButton>
+    //     </div>
+    //   </header>
+
+    //   <section id="how-it-works" className="mb-16 max-w-4xl mx-auto">
+    //     <h2 className="text-2xl font-semibold text-center mb-6">
+    //       🎥 Xem TakeNote hoạt động
+    //     </h2>
+    //     <div className="aspect-w-16 aspect-h-9">
+    //       <iframe
+    //         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    //         title="Demo Video"
+    //         frameBorder="0"
+    //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    //         allowFullScreen
+    //         className="w-full h-full rounded-xl shadow-md"
+    //       ></iframe>
+    //     </div>
+    //   </section>
+
+    //   <section
+    //     id="features"
+    //     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+    //   >
+    //     <CustomCard>
+    //       <CustomCardContent className="text-center">
+    //         <LucideYoutube className="w-10 h-10 text-red-500 mx-auto mb-4" />
+    //         <h3 className="text-xl font-semibold mb-2">
+    //           Trích xuất từ YouTube
+    //         </h3>
+    //         <p className="text-gray-600">
+    //           Tự động nhận diện nội dung và tạo ghi chú từ video YouTube.
+    //         </p>
+    //       </CustomCardContent>
+    //     </CustomCard>
+
+    //     <CustomCard>
+    //       <CustomCardContent className="text-center">
+    //         <LucideFileText className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+    //         <h3 className="text-xl font-semibold mb-2">Phân tích file PDF</h3>
+    //         <p className="text-gray-600">
+    //           Tạo ghi chú dễ hiểu từ sách, tài liệu, và giáo trình PDF.
+    //         </p>
+    //       </CustomCardContent>
+    //     </CustomCard>
+
+    //     <CustomCard>
+    //       <CustomCardContent className="text-center">
+    //         <LucideMic className="w-10 h-10 text-purple-600 mx-auto mb-4" />
+    //         <h3 className="text-xl font-semibold mb-2">
+    //           Ghi âm & nhận diện giọng nói
+    //         </h3>
+    //         <p className="text-gray-600">
+    //           Chuyển lời nói thành văn bản và ghi chú theo thời gian thực.
+    //         </p>
+    //       </CustomCardContent>
+    //     </CustomCard>
+
+    //     <CustomCard>
+    //       <CustomCardContent className="text-center">
+    //         <LucideBookOpenCheck className="w-10 h-10 text-green-600 mx-auto mb-4" />
+    //         <h3 className="text-xl font-semibold mb-2">Ghi chú dạng văn bản</h3>
+    //         <p className="text-gray-600">
+    //           Tổ chức thông tin dưới dạng bullet points hoặc đoạn văn ngắn.
+    //         </p>
+    //       </CustomCardContent>
+    //     </CustomCard>
+
+    //     <CustomCard>
+    //       <CustomCardContent className="text-center">
+    //         <LucideMap className="w-10 h-10 text-orange-500 mx-auto mb-4" />
+    //         <h3 className="text-xl font-semibold mb-2">Mind Map trực quan</h3>
+    //         <p className="text-gray-600">
+    //           Biểu diễn kiến thức bằng sơ đồ tư duy sinh động, dễ nhớ.
+    //         </p>
+    //       </CustomCardContent>
+    //     </CustomCard>
+    //   </section>
+
+    //   <section id="testimonial" className="bg-gray-50 py-16 mt-20">
+    //     <h2 className="text-3xl font-bold text-center mb-10">
+    //       ❤️ Người dùng nói gì?
+    //     </h2>
+    //     <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
+    //       <CustomCard>
+    //         <CustomCardContent>
+    //           <p className="text-gray-600 mb-4">
+    //             “TakeNote đã thay đổi cách mình học và làm việc mỗi ngày.”
+    //           </p>
+    //           <div className="font-semibold">Nguyễn Huyền, Sinh viên Y</div>
+    //         </CustomCardContent>
+    //       </CustomCard>
+    //       <CustomCard>
+    //         <CustomCardContent>
+    //           <p className="text-gray-600 mb-4">
+    //             “Tôi dùng để tổng hợp lại nội dung họp team cực kỳ nhanh.”
+    //           </p>
+    //           <div className="font-semibold">Minh Trí, Quản lý dự án</div>
+    //         </CustomCardContent>
+    //       </CustomCard>
+    //       <CustomCard>
+    //         <CustomCardContent>
+    //           <p className="text-gray-600 mb-4">
+    //             “Mindmap của TakeNote quá tuyệt cho việc brainstorm.”
+    //           </p>
+    //           <div className="font-semibold">Linh Lê, Designer</div>
+    //         </CustomCardContent>
+    //       </CustomCard>
+    //     </div>
+    //   </section>
+
+    //   <section className="text-center my-20">
+    //     <h2 className="text-2xl font-semibold mb-4">
+    //       📬 Nhận bản tin & tips tăng hiệu suất học tập/làm việc
+    //     </h2>
+    //     <form className="flex flex-col md:flex-row gap-4 justify-center mt-4">
+    //       <input
+    //         type="email"
+    //         placeholder="Nhập email của bạn"
+    //         className="px-4 py-3 rounded-xl border w-72 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+    //       />
+    //       <CustomButton className="flex gap-2">
+    //         <LucideMail className="w-5 h-5" /> Đăng ký
+    //       </CustomButton>
+    //     </form>
+    //     <p className="text-gray-400 text-sm mt-2">
+    //       Không spam. Hủy đăng ký bất kỳ lúc nào.
+    //     </p>
+    //   </section>
+
+    //   <section className="bg-blue-100 py-16 text-center rounded-2xl max-w-5xl mx-auto mb-20">
+    //     <h2 className="text-3xl font-bold mb-4">
+    //       ✨ Nâng cấp Pro để trải nghiệm đầy đủ
+    //     </h2>
+    //     <p className="text-lg text-gray-700 max-w-xl mx-auto mb-6">
+    //       Truy cập không giới hạn, ghi chú nâng cao, lưu trữ đám mây, và nhiều
+    //       tính năng sắp tới.
+    //     </p>
+    //     <CustomButton className="text-lg px-8 py-4 rounded-full">
+    //       Nâng cấp lên bản Pro
+    //     </CustomButton>
+    //   </section>
+    //   <section className="py-20 bg-white max-w-6xl mx-auto">
+    //     <h2 className="text-3xl font-bold text-center mb-10">💎 Gói dịch vụ</h2>
+    //     <div className="grid md:grid-cols-3 gap-8">
+    //       <PricingCard
+    //         title="Miễn phí"
+    //         price="0₫"
+    //         features={[
+    //           "Trích xuất từ YouTube",
+    //           "Ghi chú từ PDF",
+    //           "Ghi âm & chuyển giọng nói",
+    //         ]}
+    //         buttonText="Dùng ngay"
+    //         highlight
+    //       />
+    //       <PricingCard
+    //         title="Pro"
+    //         price="99.000₫ / tháng"
+    //         features={[
+    //           "Mind Map",
+    //           "Lưu trữ đám mây",
+    //           "Ưu tiên hỗ trợ",
+    //           "Không giới hạn ghi chú",
+    //         ]}
+    //         buttonText="Nâng cấp Pro"
+    //         highlight
+    //       />
+    //       <PricingCard
+    //         title="Doanh nghiệp"
+    //         price="Liên hệ"
+    //         features={[
+    //           "Tùy chỉnh tính năng",
+    //           "Bảo mật nâng cao",
+    //           "Tích hợp API",
+    //           "Quản lý nhiều người dùng",
+    //         ]}
+    //         buttonText="Liên hệ ngay"
+    //         highlight
+    //       />
+    //     </div>
+    //   </section>
+    // </div>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-4 md:p-8">
-      <Navbar></Navbar>
+      <Navbar />
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
           NoteFlow AI
         </h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          Ghi chú thông minh từ video, PDF, YouTube, và bản ghi âm — dưới dạng
-          văn bản hoặc mind map. Tăng hiệu suất, lưu giữ kiến thức.
+          Smart note-taking from videos, PDFs, YouTube, and recordings — in text
+          or mind map format. Boost productivity and retain knowledge.
         </p>
         <div className="mt-6 flex justify-center gap-4">
           <CustomButton>
-            <Link href="/dashboard">Bắt đầu miễn phí</Link>
+            <Link href="/dashboard">Start for Free</Link>
           </CustomButton>
-          <CustomButton variant="outline">Nâng cấp Pro</CustomButton>
+          <CustomButton variant="outline">Upgrade to Pro</CustomButton>
         </div>
       </header>
 
       <section id="how-it-works" className="mb-16 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-center mb-6">
-          🎥 Xem TakeNote hoạt động
+          🎥 Watch NoteFlow in Action
         </h2>
         <div className="aspect-w-16 aspect-h-9">
           <iframe
@@ -152,11 +349,10 @@ export default function Home() {
         <CustomCard>
           <CustomCardContent className="text-center">
             <LucideYoutube className="w-10 h-10 text-red-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">
-              Trích xuất từ YouTube
-            </h3>
+            <h3 className="text-xl font-semibold mb-2">Extract from YouTube</h3>
             <p className="text-gray-600">
-              Tự động nhận diện nội dung và tạo ghi chú từ video YouTube.
+              Automatically detect content and generate notes from YouTube
+              videos.
             </p>
           </CustomCardContent>
         </CustomCard>
@@ -164,9 +360,9 @@ export default function Home() {
         <CustomCard>
           <CustomCardContent className="text-center">
             <LucideFileText className="w-10 h-10 text-blue-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Phân tích file PDF</h3>
+            <h3 className="text-xl font-semibold mb-2">Analyze PDF Files</h3>
             <p className="text-gray-600">
-              Tạo ghi chú dễ hiểu từ sách, tài liệu, và giáo trình PDF.
+              Create clear notes from books, documents, and course materials.
             </p>
           </CustomCardContent>
         </CustomCard>
@@ -175,10 +371,10 @@ export default function Home() {
           <CustomCardContent className="text-center">
             <LucideMic className="w-10 h-10 text-purple-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">
-              Ghi âm & nhận diện giọng nói
+              Audio & Speech Recognition
             </h3>
             <p className="text-gray-600">
-              Chuyển lời nói thành văn bản và ghi chú theo thời gian thực.
+              Convert speech to text and take notes in real-time.
             </p>
           </CustomCardContent>
         </CustomCard>
@@ -186,9 +382,9 @@ export default function Home() {
         <CustomCard>
           <CustomCardContent className="text-center">
             <LucideBookOpenCheck className="w-10 h-10 text-green-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Ghi chú dạng văn bản</h3>
+            <h3 className="text-xl font-semibold mb-2">Text-Based Notes</h3>
             <p className="text-gray-600">
-              Tổ chức thông tin dưới dạng bullet points hoặc đoạn văn ngắn.
+              Organize information into bullet points or short paragraphs.
             </p>
           </CustomCardContent>
         </CustomCard>
@@ -196,9 +392,9 @@ export default function Home() {
         <CustomCard>
           <CustomCardContent className="text-center">
             <LucideMap className="w-10 h-10 text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Mind Map trực quan</h3>
+            <h3 className="text-xl font-semibold mb-2">Visual Mind Maps</h3>
             <p className="text-gray-600">
-              Biểu diễn kiến thức bằng sơ đồ tư duy sinh động, dễ nhớ.
+              Represent knowledge with vivid, easy-to-remember mind maps.
             </p>
           </CustomCardContent>
         </CustomCard>
@@ -206,31 +402,31 @@ export default function Home() {
 
       <section id="testimonial" className="bg-gray-50 py-16 mt-20">
         <h2 className="text-3xl font-bold text-center mb-10">
-          ❤️ Người dùng nói gì?
+          ❤️ What Users Are Saying
         </h2>
         <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
           <CustomCard>
             <CustomCardContent>
               <p className="text-gray-600 mb-4">
-                “TakeNote đã thay đổi cách mình học và làm việc mỗi ngày.”
+                “NoteFlow has changed the way I learn and work every day.”
               </p>
-              <div className="font-semibold">Nguyễn Huyền, Sinh viên Y</div>
+              <div className="font-semibold">Nguyen Huyen, Medical Student</div>
             </CustomCardContent>
           </CustomCard>
           <CustomCard>
             <CustomCardContent>
               <p className="text-gray-600 mb-4">
-                “Tôi dùng để tổng hợp lại nội dung họp team cực kỳ nhanh.”
+                “I use it to quickly summarize team meeting notes.”
               </p>
-              <div className="font-semibold">Minh Trí, Quản lý dự án</div>
+              <div className="font-semibold">Minh Tri, Project Manager</div>
             </CustomCardContent>
           </CustomCard>
           <CustomCard>
             <CustomCardContent>
               <p className="text-gray-600 mb-4">
-                “Mindmap của TakeNote quá tuyệt cho việc brainstorm.”
+                “NoteFlow’s mind maps are perfect for brainstorming.”
               </p>
-              <div className="font-semibold">Linh Lê, Designer</div>
+              <div className="font-semibold">Linh Le, Designer</div>
             </CustomCardContent>
           </CustomCard>
         </div>
@@ -238,71 +434,74 @@ export default function Home() {
 
       <section className="text-center my-20">
         <h2 className="text-2xl font-semibold mb-4">
-          📬 Nhận bản tin & tips tăng hiệu suất học tập/làm việc
+          📬 Subscribe for Productivity & Learning Tips
         </h2>
         <form className="flex flex-col md:flex-row gap-4 justify-center mt-4">
           <input
             type="email"
-            placeholder="Nhập email của bạn"
+            placeholder="Enter your email"
             className="px-4 py-3 rounded-xl border w-72 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <CustomButton className="flex gap-2">
-            <LucideMail className="w-5 h-5" /> Đăng ký
+            <LucideMail className="w-5 h-5" /> Subscribe
           </CustomButton>
         </form>
         <p className="text-gray-400 text-sm mt-2">
-          Không spam. Hủy đăng ký bất kỳ lúc nào.
+          No spam. Unsubscribe anytime.
         </p>
       </section>
 
       <section className="bg-blue-100 py-16 text-center rounded-2xl max-w-5xl mx-auto mb-20">
         <h2 className="text-3xl font-bold mb-4">
-          ✨ Nâng cấp Pro để trải nghiệm đầy đủ
+          ✨ Upgrade to Pro for the Full Experience
         </h2>
         <p className="text-lg text-gray-700 max-w-xl mx-auto mb-6">
-          Truy cập không giới hạn, ghi chú nâng cao, lưu trữ đám mây, và nhiều
-          tính năng sắp tới.
+          Unlimited access, advanced note-taking, cloud storage, and more
+          features coming soon.
         </p>
         <CustomButton className="text-lg px-8 py-4 rounded-full">
-          Nâng cấp lên bản Pro
+          Upgrade to Pro
         </CustomButton>
       </section>
+
       <section className="py-20 bg-white max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">💎 Gói dịch vụ</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">
+          💎 Pricing Plans
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <PricingCard
-            title="Miễn phí"
-            price="0₫"
+            title="Free"
+            price="$0"
             features={[
-              "Trích xuất từ YouTube",
-              "Ghi chú từ PDF",
-              "Ghi âm & chuyển giọng nói",
+              "Extract from YouTube",
+              "Notes from PDF",
+              "Audio & Speech-to-Text",
             ]}
-            buttonText="Dùng ngay"
+            buttonText="Get Started"
             highlight
           />
           <PricingCard
             title="Pro"
-            price="99.000₫ / tháng"
+            price="$3.99 / month"
             features={[
-              "Mind Map",
-              "Lưu trữ đám mây",
-              "Ưu tiên hỗ trợ",
-              "Không giới hạn ghi chú",
+              "Mind Maps",
+              "Cloud Storage",
+              "Priority Support",
+              "Unlimited Notes",
             ]}
-            buttonText="Nâng cấp Pro"
+            buttonText="Go Pro"
             highlight
           />
           <PricingCard
-            title="Doanh nghiệp"
-            price="Liên hệ"
+            title="Enterprise"
+            price="Contact Us"
             features={[
-              "Tùy chỉnh tính năng",
-              "Bảo mật nâng cao",
-              "Tích hợp API",
-              "Quản lý nhiều người dùng",
+              "Custom Features",
+              "Advanced Security",
+              "API Integration",
+              "Multi-user Management",
             ]}
-            buttonText="Liên hệ ngay"
+            buttonText="Contact Now"
             highlight
           />
         </div>

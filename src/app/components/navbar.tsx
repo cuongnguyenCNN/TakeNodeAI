@@ -1,42 +1,39 @@
 "use client";
-import React, { useState } from "react";
-import { LucideMenu, LucideX } from "lucide-react";
+import { useState } from "react";
 import Link from "next/link";
+import { Menu as LucideMenu, X as LucideX } from "lucide-react";
 
-function Navbar() {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const menuItems = [
+    { label: "Dashboard", href: "/dashboard" },
+    { label: "How it Works", href: "#how-it-works" },
+    { label: "Features", href: "#features" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "Testimonials", href: "#testimonial" },
+    { label: "Sign Up", href: "/sign-in" },
+  ];
 
   return (
-    <nav className="  shadow-md z-50 flex justify-between items-center px-6 py-4">
+    <nav className="shadow-md z-50 flex justify-between items-center px-6 py-4">
       <div className="font-bold text-xl">NoteFlow AI</div>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6">
-        <a href="dashboard" className="text-gray-600 hover:text-blue-600">
-          Dashboard
-        </a>
-        <a href="#how-it-works" className="text-gray-600 hover:text-blue-600">
-          Cách hoạt động
-        </a>
-        <a href="#features" className="text-gray-600 hover:text-blue-600">
-          Tính năng
-        </a>
-        <a href="#pricing" className="text-gray-600 hover:text-blue-600">
-          Gói dịch vụ
-        </a>
-        <a href="#testimonial" className="text-gray-600 hover:text-blue-600">
-          Cảm nhận
-        </a>
-        <a href="sign-in" className="text-gray-600 hover:text-blue-600">
-          Đăng ký
-        </a>
+        {menuItems.map((item, idx) => (
+          <Link
+            key={idx}
+            href={item.href}
+            className="text-gray-600 hover:text-blue-600"
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
 
-      {/* Mobile Menu Toggle Icon */}
+      {/* Mobile Menu Icon */}
       <div className="md:hidden">
         <button onClick={toggleMenu}>
           {isMenuOpen ? (
@@ -55,62 +52,25 @@ function Navbar() {
               <li>
                 <Link
                   href="/"
+                  onClick={toggleMenu}
                   className="block text-gray-800 hover:text-blue-600"
                 >
-                  Trang chủ
+                  Home
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/dashboard"
-                  className="block text-gray-800 hover:text-blue-600"
-                >
-                  Dashboard
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="#how-it-works"
-                  className="block text-gray-800 hover:text-blue-600"
-                >
-                  Cách hoạt động
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#features"
-                  className="block text-gray-800 hover:text-blue-600"
-                >
-                  Tính năng
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="block text-gray-800 hover:text-blue-600"
-                >
-                  Gói dịch vụ
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#testimonial"
-                  className="block text-gray-800 hover:text-blue-600"
-                >
-                  Cảm nhận
-                </a>
-              </li>
-              <li>
-                <a
-                  href="sign-in"
-                  className="block text-gray-800 hover:text-blue-600"
-                >
-                  Đăng ký
-                </a>
-              </li>
-              <li></li>
+              {menuItems.map((item, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={item.href}
+                    onClick={toggleMenu}
+                    className="block text-gray-800 hover:text-blue-600"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <button onClick={toggleMenu}>
+            <button onClick={toggleMenu} className="mt-6">
               <LucideX className="w-6 h-6 text-gray-600" />
             </button>
           </div>
@@ -119,5 +79,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;
