@@ -20,6 +20,9 @@ function convertStyleStringToObject(styleString: string) {
 }
 export default function YoutubeModal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenUploadPdf, setIsOpenUploadPdf] = useState(false);
+  const [isOpenUploadAudio, setIsOpenUploadAudio] = useState(false);
+  const [isOpenUploadRecording, setIsOpenUploadRecording] = useState(false);
   const [youtubeLink, setYoutubeLink] = useState("");
   const [language, setLanguage] = useState("Auto detect");
   const [error, setError] = useState("");
@@ -57,7 +60,10 @@ export default function YoutubeModal() {
   return (
     <>
       <div className="flex items-center max-[600px]:flex-col max-[600px]:gap-3 gap-3 ">
-        <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 mt-6 max-[600px]:mt-6 max-[600px]:w-full bg-red-500 hover:bg-red-600 text-white">
+        <button
+          onClick={() => setIsOpenUploadRecording(true)}
+          className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 mt-6 max-[600px]:mt-6 max-[600px]:w-full bg-red-500 hover:bg-red-600 text-white"
+        >
           <svg
             className="mr-2 "
             xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +79,10 @@ export default function YoutubeModal() {
           </svg>
           Record audio
         </button>
-        <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full">
+        <button
+          onClick={() => setIsOpenUploadAudio(true)}
+          className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -92,7 +101,10 @@ export default function YoutubeModal() {
           </svg>
           Upload audio
         </button>
-        <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full">
+        <button
+          onClick={() => setIsOpenUploadPdf(true)}
+          className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-6 max-[600px]:mt-0 max-[600px]:w-full"
+        >
           <img
             alt="PDF"
             loading="lazy"
@@ -130,7 +142,7 @@ export default function YoutubeModal() {
 
       {isOpen && (
         <>
-          <div className="fixed inset-0 bg-black\/80 bg-opacity-50 z-50 flex justify-center items-center">
+          <div className="fixed inset-0 bg-black\/80 bg-opacity-50 z-50 flex justify-center items-center bg-black/50">
             <div
               className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative"
               ref={modalRef}
@@ -2591,6 +2603,598 @@ export default function YoutubeModal() {
             </button>
           </div> */}
         </>
+      )}
+      {isOpenUploadPdf && (
+        <div className="fixed inset-0 bg-black\/80 bg-opacity-50 z-50 flex justify-center items-center bg-black/50">
+          <div
+            role="dialog"
+            id="radix-:rs:"
+            aria-describedby="radix-:ru:"
+            aria-labelledby="radix-:rt:"
+            data-state="open"
+            className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative"
+            style={convertStyleStringToObject("pointer-events: auto;")}
+          >
+            <div className="w-full flex flex-col items-center pt-5">
+              <div className="flex flex-col items-center">
+                <h3 className="scroll-m-20 text-2xl tracking-tight font-bold">
+                  Upload PDF
+                </h3>
+              </div>
+              <div className="flex flex-col items-center justify-center w-full">
+                <div className="flex flex-col w-full items-start mt-5 gap-2">
+                  <div className="grid w-full focus:outline-none overflow-hidden">
+                    <div className="relative w-full cursor-pointer ">
+                      <div
+                        className="w-full rounded-lg duration-300 ease-in-out border-gray-300"
+                        role="presentation"
+                      >
+                        <div className="flex flex-col items-center justify-center h-32 w-full border border-dashed bg-background rounded-md">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            className="lucide lucide-upload text-muted-foreground"
+                          >
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" x2="12" y1="3" y2="15"></line>
+                          </svg>
+                          <p className="text-muted-foreground text-sm mt-1">
+                            Drag or click to upload your PDF file
+                          </p>
+                          <p className="text-muted-foreground text-xs">
+                            Supported formats: pdf
+                          </p>
+                        </div>
+                      </div>
+                      <input
+                        className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        accept="application/pdf,.pdf"
+                        type="file"
+                        style={convertStyleStringToObject("display: none;")}
+                      />
+                    </div>
+                    <div
+                      className="w-full px-1"
+                      aria-description="content file holder"
+                    >
+                      <div className="rounded-xl flex items-center flex-row gap-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-orientation="horizontal"
+                  role="none"
+                  className="shrink-0 bg-border h-[1px] w-full my-4"
+                ></div>
+                <div className="grid grid-cols-1 w-full gap-2 gap-y-4 mt-0">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-row items-center gap-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <small className="text-sm leading-none font-bold">
+                        Note language
+                      </small>
+                    </div>
+                    <button
+                      className="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full justify-between"
+                      role="combobox"
+                      aria-expanded="false"
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-controls="radix-:r1h:"
+                      data-state="closed"
+                    >
+                      🤖 Auto detect
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
+                      >
+                        <path d="m7 15 5 5 5-5"></path>
+                        <path d="m7 9 5-5 5 5"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <small className="font-medium text-muted-foreground text-xs flex flex-row items-center gap-1">
+                You can use AI auto-detect to detect the audio language and note
+                generation language.
+              </small>
+            </div>
+            <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2">
+              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 mt-3 w-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-sparkles"
+                >
+                  <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                  <path d="M20 3v4"></path>
+                  <path d="M22 5h-4"></path>
+                  <path d="M4 17v2"></path>
+                  <path d="M5 18H3"></path>
+                </svg>
+                Generate note
+              </button>
+            </div>
+            <button
+              onClick={() => setIsOpenUploadPdf(false)}
+              type="button"
+              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-x h-4 w-4"
+              >
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+              <span className="sr-only">Close</span>
+            </button>
+          </div>
+        </div>
+      )}
+      {isOpenUploadAudio && (
+        <div className="fixed inset-0 bg-black\/80 bg-opacity-50 z-50 flex justify-center items-center bg-black/50">
+          <div
+            role="dialog"
+            id="radix-:rs:"
+            aria-describedby="radix-:ru:"
+            aria-labelledby="radix-:rt:"
+            data-state="open"
+            className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative"
+            style={convertStyleStringToObject("pointer-events: auto;")}
+          >
+            <div className="w-full flex flex-col items-center pt-5">
+              <div className="flex flex-col items-center">
+                <h3 className="scroll-m-20 text-2xl tracking-tight font-bold">
+                  Upload Audio
+                </h3>
+              </div>
+              <div className="flex flex-col items-center justify-center w-full">
+                <div className="flex flex-col w-full items-start mt-5 gap-2">
+                  <div className="grid w-full focus:outline-none overflow-hidden">
+                    <div className="relative w-full cursor-pointer ">
+                      <div
+                        className="w-full rounded-lg duration-300 ease-in-out border-gray-300"
+                        role="presentation"
+                      >
+                        <div className="flex flex-col items-center justify-center h-32 w-full border border-dashed bg-background rounded-md">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            className="lucide lucide-upload text-muted-foreground"
+                          >
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" x2="12" y1="3" y2="15"></line>
+                          </svg>
+                          <p className="text-muted-foreground text-sm mt-1">
+                            Drag audio file here, or click to select
+                          </p>
+                          <p className="text-muted-foreground text-xs">
+                            Supported formats: mp3, mav, ogg, flac, aac, wma,
+                            aiff
+                          </p>
+                        </div>
+                      </div>
+                      <input
+                        className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        accept="application/pdf,.pdf"
+                        type="file"
+                        style={convertStyleStringToObject("display: none;")}
+                      />
+                    </div>
+                    <div
+                      className="w-full px-1"
+                      aria-description="content file holder"
+                    >
+                      <div className="rounded-xl flex items-center flex-row gap-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-orientation="horizontal"
+                  role="none"
+                  className="shrink-0 bg-border h-[1px] w-full my-4"
+                ></div>
+                <div className="grid grid-cols-1 w-full gap-2 gap-y-4 mt-0">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-row items-center gap-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <small className="text-sm leading-none font-bold">
+                        Note language
+                      </small>
+                    </div>
+                    <button
+                      className="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full justify-between"
+                      role="combobox"
+                      aria-expanded="false"
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-controls="radix-:r1h:"
+                      data-state="closed"
+                    >
+                      🤖 Auto detect
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
+                      >
+                        <path d="m7 15 5 5 5-5"></path>
+                        <path d="m7 9 5-5 5 5"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <small className="font-medium text-muted-foreground text-xs flex flex-row items-center gap-1">
+                You can use AI auto-detect to detect the audio language and note
+                generation language.
+              </small>
+            </div>
+            <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2">
+              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 mt-3 w-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-sparkles"
+                >
+                  <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                  <path d="M20 3v4"></path>
+                  <path d="M22 5h-4"></path>
+                  <path d="M4 17v2"></path>
+                  <path d="M5 18H3"></path>
+                </svg>
+                Generate note
+              </button>
+            </div>
+            <button
+              onClick={() => setIsOpenUploadAudio(false)}
+              type="button"
+              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-x h-4 w-4"
+              >
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+              <span className="sr-only">Close</span>
+            </button>
+          </div>
+        </div>
+      )}
+      {isOpenUploadRecording && (
+        <div className="fixed inset-0 bg-black\/80 bg-opacity-50 z-50 flex justify-center items-center bg-black/50">
+          <div
+            role="dialog"
+            id="radix-:rs:"
+            aria-describedby="radix-:ru:"
+            aria-labelledby="radix-:rt:"
+            data-state="open"
+            className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative"
+            style={convertStyleStringToObject("pointer-events: auto;")}
+          >
+            <div className="w-full flex flex-col items-center pt-5">
+              <div className="flex flex-col items-center">
+                <h3 className="scroll-m-20 text-2xl tracking-tight font-bold">
+                  Record Audio
+                </h3>
+              </div>
+              <div className="flex flex-col items-center justify-center w-full">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="relative">
+                    <div
+                      className="audio-recorder  mt-5"
+                      data-testid="audio_recorder"
+                    >
+                      <img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDQ3MCA0NzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3MCA0NzA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KCTxnPgoJCTxwYXRoIGQ9Ik0yMzUsMzAyLjI5NmM0Ny4xNzcsMCw4NS40MjMtMzguMjQ1LDg1LjQyMy04NS40MjNWODUuNDIzQzMyMC40MjMsMzguMjQ1LDI4Mi4xNzcsMCwyMzUsMHMtODUuNDIzLDM4LjI0NS04NS40MjMsODUuNDIzCgkJCXYxMzEuNDUxQzE0OS41NzcsMjY0LjA1MSwxODcuODIzLDMwMi4yOTYsMjM1LDMwMi4yOTZ6Ii8+CgkJPHBhdGggZD0iTTM1MC40MjMsMTM2LjE0OHYzMGgxNXY1MC43MjZjMCw3MS45MTUtNTguNTA4LDEzMC40MjMtMTMwLjQyMywxMzAuNDIzcy0xMzAuNDIzLTU4LjUwNy0xMzAuNDIzLTEzMC40MjN2LTUwLjcyNmgxNXYtMzAKCQkJaC00NXY4MC43MjZDNzQuNTc3LDMwMC4yNzMsMTM4LjU1MSwzNjksMjIwLDM3Ni41ODlWNDQwaC05MC40NDR2MzBoMjEwLjg4OXYtMzBIMjUwdi02My40MTEKCQkJYzgxLjQ0OS03LjU4OSwxNDUuNDIzLTc2LjMxNywxNDUuNDIzLTE1OS43MTZ2LTgwLjcyNkgzNTAuNDIzeiIvPgoJPC9nPgo8L3N2Zz4K"
+                        className="audio-recorder-mic "
+                        data-testid="ar_mic"
+                        title="Start recording"
+                      />
+                      <span
+                        className="audio-recorder-timer display-none "
+                        data-testid="ar_timer"
+                      >
+                        0:00
+                      </span>
+                      <span className="audio-recorder-status display-none flex-1">
+                        <span className="audio-recorder-status-dot"></span>
+                        Recording
+                      </span>
+                      <img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNDcuNjA3IDQ3LjYwNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcuNjA3IDQ3LjYwNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgoJPGc+CgkJPHBhdGggZD0iTTE3Ljk5MSw0MC45NzZjMCwzLjY2Mi0yLjk2OSw2LjYzMS02LjYzMSw2LjYzMWwwLDBjLTMuNjYyLDAtNi42MzEtMi45NjktNi42MzEtNi42MzFWNi42MzFDNC43MjksMi45NjksNy42OTgsMCwxMS4zNiwwCgkJCWwwLDBjMy42NjIsMCw2LjYzMSwyLjk2OSw2LjYzMSw2LjYzMVY0MC45NzZ6Ii8+CgkJPHBhdGggZD0iTTQyLjg3Nyw0MC45NzZjMCwzLjY2Mi0yLjk2OSw2LjYzMS02LjYzMSw2LjYzMWwwLDBjLTMuNjYyLDAtNi42MzEtMi45NjktNi42MzEtNi42MzFWNi42MzEKCQkJQzI5LjYxNiwyLjk2OSwzMi41ODUsMCwzNi4yNDYsMGwwLDBjMy42NjIsMCw2LjYzMSwyLjk2OSw2LjYzMSw2LjYzMVY0MC45NzZ6Ii8+Cgk8L2c+Cjwvc3ZnPgo="
+                        className="audio-recorder-options display-none "
+                        title="Pause recording"
+                        data-testid="ar_pause"
+                      />
+                      <img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNDYuNzM0IDQ2LjczNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDYuNzM0IDQ2LjczNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik00MS4zNDYsMEg1LjM4OEMyLjQxNywwLDAsMi40MTcsMCw1LjM4OHYzNS45NThjMCwyLjk3MSwyLjQxNyw1LjM4OCw1LjM4OCw1LjM4OGgzNS45NThjMi45NzEsMCw1LjM4OC0yLjQxNyw1LjM4OC01LjM4OAoJCVY1LjM4OEM0Ni43MzMsMi40MTcsNDQuMzE2LDAsNDEuMzQ2LDB6Ii8+CjwvZz4KPC9zdmc+Cg=="
+                        className="audio-recorder-options display-none "
+                        title="Discard Recording"
+                        data-testid="ar_cancel"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-3 flex flex-col justify-center items-center">
+                    <div
+                      className="text-xs"
+                      style={convertStyleStringToObject(
+                        "opacity: 1; filter: blur(0px); will-change: transform; transform: translateY(-6px);"
+                      )}
+                    >
+                      Press to record
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-orientation="horizontal"
+                  role="none"
+                  className="shrink-0 bg-border h-[1px] w-full my-4"
+                ></div>
+                <div className="grid grid-cols-1 w-full gap-2 gap-y-4 mt-0">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-row items-center gap-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <small className="text-sm leading-none font-bold">
+                        Note language
+                      </small>
+                    </div>
+                    <button
+                      className="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full justify-between"
+                      role="combobox"
+                      aria-expanded="false"
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-controls="radix-:r1h:"
+                      data-state="closed"
+                    >
+                      🤖 Auto detect
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
+                      >
+                        <path d="m7 15 5 5 5-5"></path>
+                        <path d="m7 9 5-5 5 5"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <small className="font-medium text-muted-foreground text-xs flex flex-row items-center gap-1">
+                You can use AI auto-detect to detect the audio language and note
+                generation language.
+              </small>
+            </div>
+            <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2">
+              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 mt-3 w-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-sparkles"
+                >
+                  <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                  <path d="M20 3v4"></path>
+                  <path d="M22 5h-4"></path>
+                  <path d="M4 17v2"></path>
+                  <path d="M5 18H3"></path>
+                </svg>
+                Generate note
+              </button>
+            </div>
+            <button
+              onClick={() => setIsOpenUploadRecording(false)}
+              type="button"
+              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-x h-4 w-4"
+              >
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+              <span className="sr-only">Close</span>
+            </button>
+          </div>
+        </div>
       )}
     </>
   );
