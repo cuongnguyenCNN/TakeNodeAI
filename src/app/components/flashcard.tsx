@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import styles from "./Flashcard.module.css";
 const initialCards = [
