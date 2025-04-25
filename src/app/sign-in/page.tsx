@@ -393,7 +393,7 @@ export default function SignIn() {
                   }}
                 />
               </GoogleOAuthProvider>
-              <button
+              {/* <button
                 type="button"
                 className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8"
               >
@@ -408,7 +408,7 @@ export default function SignIn() {
                   <path d="M359.84 13.45A14.998 14.998 0 0 0 346.746.355c-1.706-.207-42.184-4.707-72.175 25.295-29.988 30-25.49 70.486-25.283 72.195a15 15 0 0 0 13.094 13.095c22.316 2.704 52.328-5.44 72.175-25.295 29.988-30 25.49-70.486 25.283-72.195z"></path>
                 </svg>{" "}
                 Continue with Apple
-              </button>
+              </button> */}
             </div>
           </div>
           <p className="px-8  text-center text-xs text-muted-foreground">
