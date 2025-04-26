@@ -36,6 +36,29 @@ type GoogleUser = {
 };
 export default function SignIn() {
   const router = useRouter();
+  const saveUserToSupabase = async (user: GoogleUser, id_token: string) => {
+    try {
+      const res = await fetch("/api/auth/save-user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: user.email,
+          name: user.name,
+          picture: user.picture,
+          googleToken: id_token,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Unknown error saving user");
+      localStorage.setItem("userId", data.user.id);
+      console.log("User saved successfully:", data.user);
+    } catch (error) {
+      console.error("Error saving user:", error);
+    }
+  };
 
   const handleSuccess = (response: CredentialResponse) => {
     const id_token = response.credential;
@@ -58,7 +81,7 @@ export default function SignIn() {
 
     // Gọi API lấy data YouTube từ id_token nếu cần
     // fetchYouTubeData(id_token); // <-- bạn cần định nghĩa hàm này
-
+    saveUserToSupabase(user, id_token);
     router.push("/dashboard");
   };
   // const navigate = useNavigate();

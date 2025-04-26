@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import ProfileModal from "../components/profilemodal";
 import PricingModal from "../components/pricingModal";
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
@@ -36,12 +41,50 @@ export default function SideBar() {
   const [openPricingModal, setOpenPricingModal] = useState(false);
   const handleCreateFolder = () => {
     if (newFolderName.trim() === "") return;
-    setFolders([...folders, newFolderName.trim()]);
+    createFolder();
     setNewFolderName("");
     setShowModal(false);
   };
+  async function fetchFolders() {
+    const userId = localStorage.getItem("userId");
+    const res = await fetch(`/api/folders/list?userId=${userId}`);
+    const data = await res.json();
+    setFolders(data.folders);
+  }
 
+  async function createFolder() {
+    const userId = localStorage.getItem("userId");
+    if (!newFolderName.trim()) return;
+
+    await fetch("/api/folders/create", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId: userId, name: newFolderName }),
+    });
+
+    setNewFolderName("");
+    fetchFolders(); // Load lại danh sách mới
+  }
+  // useEffect(() => {
+  //   const fetchFolders = async () => {
+  //     const { data, error } = await supabase.storage.from("notes").list("", {
+  //       limit: 100,
+  //       offset: 0,
+  //     });
+
+  //     if (error) {
+  //       console.error("Error fetching folders:", error.message);
+  //     } else {
+  //       // Chỉ lấy những item là "folder"
+  //       const folderList = data.filter((item) => item.metadata?.isDirectory);
+  //       setFolders(folderList);
+  //     }
+  //   };
+
+  //   fetchFolders();
+  // }, []);
   useEffect(() => {
+    fetchFolders();
     if (showModal && inputRef.current) {
       inputRef.current.focus();
     }
@@ -58,30 +101,6 @@ export default function SideBar() {
       <div className="flex h-full flex-col overflow-y-hidden">
         <div className="flex justify-center mb-7">
           <Link href="/" className="flex items-center gap-2">
-            {/* <img
-            alt="logo"
-            loading="lazy"
-            width="25"
-            height="50"
-            decoding="async"
-            data-nimg="1"
-            className="object-contain dark:hidden"
-            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.3ed2993e.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.3ed2993e.png&amp;w=64&amp;q=75 2x"
-            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.3ed2993e.png&amp;w=64&amp;q=75"
-            style={convertStyleStringToObject("color: transparent;")}
-          /> */}
-            {/* <img
-            alt="logo"
-            loading="lazy"
-            width="25"
-            height="50"
-            decoding="async"
-            data-nimg="1"
-            className="object-contain hidden dark:block rounded-lg"
-            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white.34e7f103.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white.34e7f103.png&amp;w=64&amp;q=75 2x"
-            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-white.34e7f103.png&amp;w=64&amp;q=75"
-            style={convertStyleStringToObject("color: transparent;")}
-          /> */}
             <h4 className="scroll-m-20 tracking-tight text-2xl font-black">
               Noteflow AI
             </h4>
