@@ -90,9 +90,9 @@ export default function YoutubeModal() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-cloud-upload mr-2"
           >
             <path d="M12 13v8"></path>
@@ -215,9 +215,9 @@ export default function YoutubeModal() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-link"
                     >
                       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
@@ -251,29 +251,29 @@ export default function YoutubeModal() {
                           d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                       <small className="text-sm leading-none font-bold">
@@ -297,9 +297,9 @@ export default function YoutubeModal() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
                       >
                         <path d="m7 15 5 5 5-5"></path>
@@ -364,9 +364,9 @@ export default function YoutubeModal() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth={2}
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     className="lucide lucide-search mr-2 h-4 w-4 shrink-0 opacity-50"
                                   >
                                     <circle cx="11" cy="11" r="8"></circle>
@@ -422,9 +422,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-100 text-primary"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -449,9 +449,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -476,9 +476,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -503,9 +503,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -530,9 +530,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -557,9 +557,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -584,9 +584,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -611,9 +611,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -638,9 +638,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -665,9 +665,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -692,9 +692,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -719,9 +719,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -746,9 +746,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -773,9 +773,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -800,9 +800,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -827,9 +827,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -854,9 +854,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -881,9 +881,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -908,9 +908,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -935,9 +935,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -962,9 +962,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -989,9 +989,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1016,9 +1016,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1043,9 +1043,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1070,9 +1070,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1097,9 +1097,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1124,9 +1124,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1151,9 +1151,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1178,9 +1178,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1205,9 +1205,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1232,9 +1232,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1259,9 +1259,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1286,9 +1286,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1313,9 +1313,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1340,9 +1340,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1367,9 +1367,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1394,9 +1394,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1421,9 +1421,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1448,9 +1448,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1475,9 +1475,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1502,9 +1502,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1529,9 +1529,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1556,9 +1556,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1583,9 +1583,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1610,9 +1610,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1637,9 +1637,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1664,9 +1664,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1691,9 +1691,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1718,9 +1718,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1745,9 +1745,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1772,9 +1772,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1799,9 +1799,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1826,9 +1826,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1853,9 +1853,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1880,9 +1880,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1907,9 +1907,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1934,9 +1934,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1961,9 +1961,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -1988,9 +1988,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2015,9 +2015,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2042,9 +2042,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2069,9 +2069,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2096,9 +2096,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2123,9 +2123,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2150,9 +2150,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2177,9 +2177,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2204,9 +2204,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2231,9 +2231,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2258,9 +2258,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2285,9 +2285,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2312,9 +2312,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2339,9 +2339,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2366,9 +2366,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2393,9 +2393,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2420,9 +2420,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2447,9 +2447,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2474,9 +2474,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2501,9 +2501,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2528,9 +2528,9 @@ export default function YoutubeModal() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth={2}
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             className="lucide lucide-check mr-2 h-4 w-4 opacity-0"
                                           >
                                             <path d="M20 6 9 17l-5-5"></path>
@@ -2566,9 +2566,9 @@ export default function YoutubeModal() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-sparkles"
                 >
                   <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
@@ -2591,9 +2591,9 @@ export default function YoutubeModal() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="lucide lucide-x h-4 w-4"
               >
                 <path d="M18 6 6 18"></path>
@@ -2637,9 +2637,9 @@ export default function YoutubeModal() {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="lucide lucide-upload text-muted-foreground"
                           >
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -2688,29 +2688,29 @@ export default function YoutubeModal() {
                           d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                       <small className="text-sm leading-none font-bold">
@@ -2734,9 +2734,9 @@ export default function YoutubeModal() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
                       >
                         <path d="m7 15 5 5 5-5"></path>
@@ -2762,9 +2762,9 @@ export default function YoutubeModal() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-sparkles"
                 >
                   <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
@@ -2788,9 +2788,9 @@ export default function YoutubeModal() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="lucide lucide-x h-4 w-4"
               >
                 <path d="M18 6 6 18"></path>
@@ -2834,9 +2834,9 @@ export default function YoutubeModal() {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="lucide lucide-upload text-muted-foreground"
                           >
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -2886,29 +2886,29 @@ export default function YoutubeModal() {
                           d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                       <small className="text-sm leading-none font-bold">
@@ -2932,9 +2932,9 @@ export default function YoutubeModal() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
                       >
                         <path d="m7 15 5 5 5-5"></path>
@@ -2960,9 +2960,9 @@ export default function YoutubeModal() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-sparkles"
                 >
                   <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
@@ -2986,9 +2986,9 @@ export default function YoutubeModal() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="lucide lucide-x h-4 w-4"
               >
                 <path d="M18 6 6 18"></path>
@@ -3083,29 +3083,29 @@ export default function YoutubeModal() {
                           d="m19.06 18.67-2.14-4.27-2.14 4.27M15.17 17.91h3.52"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M16.92 22a5.08 5.08 0 1 1 .002-10.162A5.08 5.08 0 0 1 16.92 22ZM5.02 2h3.92c2.07 0 3.07 1 3.02 3.02v3.92c.05 2.07-.95 3.07-3.02 3.02H5.02C3 12 2 11 2 8.93V5.01C2 3 3 2 5.02 2ZM9.01 5.85H4.95M6.97 5.17v.68"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M7.99 5.84c0 1.75-1.37 3.17-3.05 3.17"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9.01 9.01c-.73 0-1.39-.39-1.85-1.01M2 15c0 3.87 3.13 7 7 7l-1.05-1.75M22 9c0-3.87-3.13-7-7-7l1.05 1.75"
                           stroke="currentColor"
                           stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                       <small className="text-sm leading-none font-bold">
@@ -3129,9 +3129,9 @@ export default function YoutubeModal() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50"
                       >
                         <path d="m7 15 5 5 5-5"></path>
@@ -3157,9 +3157,9 @@ export default function YoutubeModal() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-sparkles"
                 >
                   <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
@@ -3183,9 +3183,9 @@ export default function YoutubeModal() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="lucide lucide-x h-4 w-4"
               >
                 <path d="M18 6 6 18"></path>

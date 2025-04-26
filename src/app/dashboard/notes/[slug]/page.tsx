@@ -131,6 +131,25 @@ function convertStyleStringToObject(styleString: string) {
 
   return styleObject;
 }
+// export type Note = {
+//     id: string;
+//     user_id: string;
+//     folder_id?: string;
+//     title: string;
+//     content: string;
+//     summary?: string;
+//     mindmap_data?: any;
+//     flashcards?: any;
+//     transcript?: string;
+//     translated_content?: string;
+//     language: string;
+//     created_at: string;
+//     updated_at: string;
+//     deleted: boolean;
+//     is_premium: boolean;
+//     word_count?: number;
+//   };
+
 // { params }: { params: { slug: string } }
 export default function NoteDetail() {
   const [activeTab, setActiveTab] = useState("note");
@@ -214,6 +233,7 @@ export default function NoteDetail() {
           </ol>
         </nav>
       </div>
+      s
       <div className="w-full grid grid-cols-4 max-[600px]:grid-cols-2 gap-2 bg-secondary rounded-md p-1">
         {tabs.map((tab) => (
           <button

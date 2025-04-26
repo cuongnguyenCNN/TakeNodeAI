@@ -37,9 +37,9 @@ export default async function Dashboard() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="lucide lucide-panel-left-open"
                   >
                     <rect width="18" height="18" x="3" y="3" rx="2"></rect>
@@ -61,9 +61,9 @@ export default async function Dashboard() {
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           className="lucide lucide-folder-open mr-2"
                         >
                           <path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"></path>
@@ -83,9 +83,9 @@ export default async function Dashboard() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevron-right"
                       >
                         <path d="m9 18 6-6-6-6"></path>
@@ -170,9 +170,9 @@ export default async function Dashboard() {
                                       viewBox="0 0 24 24"
                                       fill="none"
                                       stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth={2}
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                       className="lucide lucide-folder-plus mr-1 "
                                     >
                                       <path d="M12 10v6"></path>
@@ -214,9 +214,9 @@ export default async function Dashboard() {
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
                             >
                               <path d="m9 18 6-6-6-6"></path>
@@ -261,9 +261,9 @@ export default async function Dashboard() {
                                       viewBox="0 0 24 24"
                                       fill="none"
                                       stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth={2}
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                       className="lucide lucide-folder-plus mr-1 "
                                     >
                                       <path d="M12 10v6"></path>
@@ -305,9 +305,9 @@ export default async function Dashboard() {
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
                             >
                               <path d="m9 18 6-6-6-6"></path>
@@ -352,9 +352,9 @@ export default async function Dashboard() {
                                       viewBox="0 0 24 24"
                                       fill="none"
                                       stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth={2}
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                       className="lucide lucide-folder-plus mr-1 "
                                     >
                                       <path d="M12 10v6"></path>
@@ -373,9 +373,9 @@ export default async function Dashboard() {
                                       viewBox="0 0 24 24"
                                       fill="none"
                                       stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth={2}
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                       className="lucide lucide-text mr-1 "
                                     >
                                       <path d="M17 6.1H3"></path>
@@ -399,9 +399,9 @@ export default async function Dashboard() {
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               className="lucide lucide-chevron-right ml-3 h-4 w-4 transition-transform duration-150 group-hover:translate-x-2"
                             >
                               <path d="m9 18 6-6-6-6"></path>
