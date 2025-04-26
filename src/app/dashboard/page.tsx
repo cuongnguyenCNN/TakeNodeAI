@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import "../../css/21527cccdd6ccf0f.css";
 import "../../css/b81a822ef496e877.css";
 
 import "../../css/be7c40c9332f48ab.css";
 import YoutubeModal from "../components/youtubemodal";
+import { useState } from "react";
+import SideBar from "./sidebar";
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
@@ -22,6 +25,7 @@ function convertStyleStringToObject(styleString: string) {
   return styleObject;
 }
 export default async function Dashboard() {
+  const [openSidebar, setOpenSidebar] = useState(false);
   return (
     <div className="flex">
       <div className="transition-all w-full h-full  flex flex-col  duration-400 pl-[272px] max-[866px]:pl-0 max-tablet:pl-0">
@@ -29,7 +33,10 @@ export default async function Dashboard() {
           <div className="w-full py-6 flex flex-col mx-8 max-[600px]:mx-0 h-screen">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <button className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 size-9 hidden max-[866px]:flex">
+                <button
+                  onClick={() => setOpenSidebar(true)}
+                  className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 size-9 hidden max-[866px]:flex"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -47,6 +54,7 @@ export default async function Dashboard() {
                     <path d="m14 9 3 3-3 3"></path>
                   </svg>
                 </button>
+                {openSidebar && <SideBar></SideBar>}
                 <nav aria-label="breadcrumb">
                   <ol className="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5">
                     <li className="inline-flex items-center gap-1.5">
