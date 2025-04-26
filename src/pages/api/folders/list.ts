@@ -11,7 +11,7 @@ interface RequestQuery {
 
 interface ResponseData {
   error?: string;
-  folders?: any[]; // You can replace `any[]` with a more specific type if needed
+  folders?: string[]; // You can replace `any[]` with a more specific type if needed
 }
 
 export default async function handler(

@@ -12,7 +12,7 @@ interface RequestBody {
 
 interface ResponseData {
   error?: string;
-  folders?: any[]; // You can further specify this type if you know the structure of the folders
+  folders?: string[]; // You can further specify this type if you know the structure of the folders
 }
 
 export default async function handler(
