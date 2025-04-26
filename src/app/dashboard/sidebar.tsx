@@ -67,24 +67,6 @@ export default function SideBar() {
     setNewFolderName("");
     fetchFolders(); // Load lại danh sách mới
   }
-  // useEffect(() => {
-  //   const fetchFolders = async () => {
-  //     const { data, error } = await supabase.storage.from("notes").list("", {
-  //       limit: 100,
-  //       offset: 0,
-  //     });
-
-  //     if (error) {
-  //       console.error("Error fetching folders:", error.message);
-  //     } else {
-  //       // Chỉ lấy những item là "folder"
-  //       const folderList = data.filter((item) => item.metadata?.isDirectory);
-  //       setFolders(folderList);
-  //     }
-  //   };
-
-  //   fetchFolders();
-  // }, []);
   useEffect(() => {
     fetchFolders();
     if (showModal && inputRef.current) {

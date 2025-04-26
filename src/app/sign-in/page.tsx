@@ -84,54 +84,6 @@ export default function SignIn() {
     saveUserToSupabase(user, id_token);
     router.push("/dashboard");
   };
-  // const navigate = useNavigate();
-  // const fetchYouTubeData = (accessToken: string) => {
-  //   fetch(
-  //     "https://www.googleapis.com/youtube/v3/subscriptions?part=snippet&mine=true",
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         Authorization: `Bearer ${accessToken}`,
-  //       },
-  //     }
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log("YouTube Subscriptions:", data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching YouTube data:", error);
-  //     });
-  // };
-
-  // const login = useGoogleLogin({
-  //   onSuccess: async (tokenResponse) => {
-  //     const id_token = tokenResponse.access_token;
-  //     const user: any = jwtDecode(id_token);
-
-  //     localStorage.setItem("token_user", id_token);
-  //     localStorage.setItem("user_name_info", user.name);
-  //     localStorage.setItem("user_image_info", user.picture);
-  //     // setCookie("google-videobridge-auth-token", id_token, { expires: 7 });
-
-  //     console.log("User:", user);
-
-  //     // Gọi hàm xử lý hoặc fetch video notes nếu cần
-  //     // await fetchYouTubeNoteByAI(id_token);
-
-  //     router.push("/dashboard");
-  //   },
-  //   onError: () => console.error("Google Login Failed"),
-  // });
-  // const setCookie = (name: string, value: string, days: number) => {
-  //   const date = new Date();
-  //   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-  //   const expires = `expires=${date.toUTCString()}`;
-  //   document.cookie = `${name}=${value}; ${expires}; path=/`;
-  // };
-  // const deleteCookie = (name: string) => {
-  //   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-  // };
   useEffect(() => {
     const token = localStorage.getItem("token_user");
     if (token) {
