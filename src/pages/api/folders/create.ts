@@ -5,15 +5,22 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
+interface RequestBody {
+  userId: string; // or number, depending on your use case
+  name: string;
+}
+
+interface ResponseData {
+  error?: string;
+  folders?: any[]; // You can further specify this type if you know the structure of the folders
+}
 
 export default async function handler(
-  req: { method: string; body: { userId: any; name: any } },
+  req: { method: string; body: RequestBody },
   res: {
-    status: (arg0: number) => {
-      (): any;
-      new (): any;
-      end: { (): any; new (): any };
-      json: { (arg0: { error?: string; folders?: any[] }): void; new (): any };
+    status: (statusCode: number) => {
+      end: () => void;
+      json: (data: ResponseData) => void;
     };
   }
 ) {
