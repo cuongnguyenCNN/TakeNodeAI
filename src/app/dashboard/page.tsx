@@ -24,7 +24,7 @@ function convertStyleStringToObject(styleString: string) {
 
   return styleObject;
 }
-export default async function Dashboard() {
+export default function Dashboard() {
   const [openSidebar, setOpenSidebar] = useState(false);
   return (
     <div className="flex">

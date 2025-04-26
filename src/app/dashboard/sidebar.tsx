@@ -5,10 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import ProfileModal from "../components/profilemodal";
 import PricingModal from "../components/pricingModal";
 import { createClient } from "@supabase/supabase-js";
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
 function convertStyleStringToObject(styleString: string) {
   const styleObject: { [key: string]: string } = {};
 
