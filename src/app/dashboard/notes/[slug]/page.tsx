@@ -252,37 +252,6 @@ export default function NoteDetail() {
       </div>
       {activeTab === "note" && (
         <div className="rounded-lg border bg-card text-card-foreground shadow-sm relative">
-          <h1>Pacific DeFi: A New Decentralized Finance Ecosystem</h1>
-
-          <h2>Project Summary</h2>
-          <p>
-            Pacific DeFi is an ecosystem offering secure yield enhancement
-            products...
-          </p>
-
-          <h2>Mission</h2>
-          <p>
-            Pacific DeFi's mission is to provide highly secure yield enhancement
-            products...
-          </p>
-
-          <h2>Features of Pacific DeFi</h2>
-          <ul>
-            <li>
-              Complete DeFi Ecosystem: A comprehensive suite of financial
-              services.
-            </li>
-            <li>Simple UI/UX: User-friendly interface.</li>
-            <li>Built on BSC for Speed & Efficiency: Fast transactions.</li>
-          </ul>
-
-          <h2>Tokenomics</h2>
-          <ul>
-            <li>Token Name: Pacific Coin</li>
-            <li>Total Supply: 100,000,000 PACIFIC</li>
-            <li>Blockchain: Binance Smart Chain</li>
-          </ul>
-
           <div
             dir="ltr"
             className="relative overflow-hidden h-[calc(100dvh-10rem)]"
