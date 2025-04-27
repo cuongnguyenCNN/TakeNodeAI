@@ -41,7 +41,17 @@ export default function YoutubeModal() {
       // TODO: API call or action
     }
   };
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
+  const handleFileChangePDF = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setSelectedFile(e.target.files[0]);
+    }
+  };
+
+  const handleDeletePDF = () => {
+    setSelectedFile(null);
+  };
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -2625,7 +2635,8 @@ export default function YoutubeModal() {
                 <div className="flex flex-col w-full items-start mt-5 gap-2">
                   <div className="grid w-full focus:outline-none overflow-hidden">
                     <div className="relative w-full cursor-pointer ">
-                      <div
+                      <label
+                        htmlFor="file-pdf-upload"
                         className="w-full rounded-lg duration-300 ease-in-out border-gray-300"
                         role="presentation"
                       >
@@ -2652,20 +2663,29 @@ export default function YoutubeModal() {
                           <p className="text-muted-foreground text-xs">
                             Supported formats: pdf
                           </p>
+                          <input
+                            id="file-pdf-upload"
+                            onChange={handleFileChangePDF}
+                            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                            accept="application/pdf,.pdf"
+                            type="file"
+                            style={convertStyleStringToObject("display: none;")}
+                          />
                         </div>
-                      </div>
-                      <input
-                        className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                        accept="application/pdf,.pdf"
-                        type="file"
-                        style={convertStyleStringToObject("display: none;")}
-                      />
+                      </label>
                     </div>
                     <div
                       className="w-full px-1"
                       aria-description="content file holder"
                     >
-                      <div className="rounded-xl flex items-center flex-row gap-2"></div>
+                      {selectedFile?.name}
+
+                      <button
+                        className="text-red-500 hover:text-red-700"
+                        onClick={handleDeletePDF}
+                      >
+                        🗑️
+                      </button>
                     </div>
                   </div>
                 </div>
